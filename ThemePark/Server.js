@@ -133,7 +133,7 @@ app.get("/faq", (req, res) => {
   res.render("FAQ", { faqs });
 });
 
-app.get("/ContactUs", (req, res) => {
+app.get("/contact", (req, res) => {
   res.render("ContactUs");
 });
 
