@@ -113,16 +113,30 @@ section {
 
 /* Areas List Styles */
 .areas-list,
-.rides-list,
-.faq-list {
+.rides-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.area-item,
-.ride-item,
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .faq-item {
+  background: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  box-sizing: border-box;
+}
+
+.area-item,
+.ride-item {
   background: #fff;
   padding: 20px;
   margin: 10px;
@@ -134,14 +148,20 @@ section {
 }
 
 .area-item h2,
-.ride-item h2,
+.ride-item h2 {
+  margin-bottom: 10px;
+}
+
 .faq-item h2 {
   margin-bottom: 10px;
 }
 
-.area-item p,
-.ride-item p,
 .faq-item p {
+  margin-bottom: 10px;
+}
+
+.area-item p,
+.ride-item p {
   margin-bottom: 10px;
 }
 

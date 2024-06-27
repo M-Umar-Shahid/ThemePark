@@ -17,18 +17,19 @@
           <li><a href="/areas">Areas</a></li>
           <li><a href="/rides">Rides</a></li>
           <li><a href="/faq">FAQ</a></li>
-          <li><a href="/contact">Contact Us</a></li>
+          <li><a href="/ContactUs">Contact Us</a></li>
         </ul>
       </nav>
     </header>
     <main>
       <h1>Frequently Asked Questions</h1>
       <section class="faq-list">
+        <% faqs.forEach(faq => { %>
         <div class="faq-item">
-          <h2>Question 1</h2>
-          <p>Answer to Question 1.</p>
+          <h2><%= faq.question %></h2>
+          <p><%= faq.answer %></p>
         </div>
-        <!-- Add more FAQ items as needed -->
+        <% }); %>
       </section>
     </main>
     <footer>
