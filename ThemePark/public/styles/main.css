@@ -1,0 +1,243 @@
+/* Reset some default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+/* Header Styles */
+header {
+  background: #333;
+  color: #fff;
+  padding: 10px 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+header .logo img {
+  width: 150px;
+  height: auto;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+header nav ul li {
+  margin: 0 15px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content Styles */
+main {
+  padding: 20px;
+}
+
+/* Banner Styles */
+.banner {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.banner img {
+  width: 100%;
+  height: auto;
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.banner-text h1 {
+  font-size: 2.5rem;
+}
+
+.banner-text p {
+  font-size: 1.2rem;
+}
+
+/* Section Styles */
+section {
+  margin: 20px 0;
+}
+
+.about,
+.highlights {
+  text-align: center;
+}
+
+.highlights .highlight-item {
+  display: inline-block;
+  margin: 10px;
+}
+
+.highlights .highlight-item img {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.highlights .highlight-item p {
+  margin-top: 10px;
+}
+
+/* Areas List Styles */
+.areas-list,
+.rides-list,
+.faq-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.area-item,
+.ride-item,
+.faq-item {
+  background: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: calc(33% - 40px);
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.area-item h2,
+.ride-item h2,
+.faq-item h2 {
+  margin-bottom: 10px;
+}
+
+.area-item p,
+.ride-item p,
+.faq-item p {
+  margin-bottom: 10px;
+}
+
+.area-item a,
+.ride-item a,
+.faq-item a {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.area-item a:hover,
+.ride-item a:hover,
+.faq-item a:hover {
+  background: #555;
+}
+
+/* Form Styles */
+form {
+  background: #fff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+form label {
+  display: block;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+form button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: #555;
+}
+
+/* Footer Styles */
+footer {
+  background: #333;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+footer .social-media a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+}
+
+footer .social-media a:hover {
+  text-decoration: underline;
+}
+
+/* Specific Page Styles */
+.activity .activity-game {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.activity .activity-game div {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  background: #333;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border-radius: 5px;
+}
