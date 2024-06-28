@@ -16,15 +16,13 @@ body {
 
 /* Header Styles */
 header {
-  position: sticky;
-  top: 0;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 10px 20px;
   background: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
+  position: relative; /* Add this line */
 }
 
 .header-icons {
@@ -32,19 +30,22 @@ header {
   gap: 20px;
 }
 
-.header-icons i {
+.header-title {
+  position: absolute; /* Add this line */
+  left: 50%; /* Add this line */
+  transform: translateX(-50%); /* Add this line */
   font-size: 1.5rem;
-  cursor: pointer;
+  font-weight: bold;
 }
 
 .logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
 }
-/* Main Content Styles */
-main {
-  padding: 20px;
+
+.header-icons i {
+  font-size: 1.5rem;
+  cursor: pointer;
 }
 
 /* Banner Styles */
@@ -78,9 +79,9 @@ main {
 }
 
 /* Section Styles */
-section {
+/* section {
   margin: 20px 0;
-}
+} */
 
 .about,
 .highlights {
@@ -352,6 +353,11 @@ footer .social-media a:hover {
   flex-direction: column;
   max-height: fit-content;
   overflow-y: auto;
+  display: none;
+}
+
+.submenu-items.show {
+  display: block;
 }
 
 .submenu-item {
@@ -362,6 +368,16 @@ footer .social-media a:hover {
   border-radius: 10px;
   cursor: pointer;
   color: #fff;
+}
+
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.no-rotate {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
 }
 
 #nicku {
@@ -424,9 +440,4 @@ footer .social-media a:hover {
 .ride-submenu-item span {
   position: relative;
   z-index: 1;
-}
-
-/* Main Content Styles */
-main {
-  padding: 20px;
 }
