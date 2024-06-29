@@ -51,119 +51,50 @@
 <div id="sub-menu" class="sub-menu">
   <ul>
     <li>
-      <hr />
-      <div id="parks-menu" class="sub-menu-content">
+      <div
+        style="width: 90%; margin: auto"
+        id="parks-menu"
+        class="sub-menu-content"
+      >
         PARKS
         <i class="fas fa-chevron-down parks-chevron"></i>
       </div>
-      <div class="submenu-items parks">
-        <div class="submenu-item" id="nicku">
-          <span>Nickelodeon Universe</span>
-          <img src="/assets/nav-nicku.png" alt="Nickelodeon Universe" />
-        </div>
-        <div class="submenu-item" id="dwwp">
-          <span>DreamWorks Water Park</span>
-          <img src="/assets/nav_dwwp.png" alt="DreamWorks Water Park" />
-        </div>
-        <div class="submenu-item" id="bs">
-          <span>Big SNOW</span>
-          <img src="/assets/nav-bs.png" alt="Big SNOW" />
+      <div style="width: 90%; margin: auto" class="submenu-items parks">
+        <div class="submenu-items parks">
+          <div class="submenu-item" id="nicku">
+            <span><%= areas[0].name %></span>
+            <img src="<%= areas[0].image %>" alt="Nickelodeon Universe" />
+          </div>
+          <div class="submenu-item" id="dwwp">
+            <span><%= areas[1].name %></span>
+            <img src="<%= areas[1].image %>" alt="DreamWorks Water Park" />
+          </div>
+          <div class="submenu-item" id="bs">
+            <span><%= areas[2].name %></span>
+            <img src="<%= areas[2].image %>" alt="Big SNOW" />
+          </div>
         </div>
       </div>
-      <hr />
     </li>
     <li>
-      <div id="rides-menu" class="sub-menu-content">
+      <div
+        style="width: 90%; margin: auto"
+        id="rides-menu"
+        class="sub-menu-content"
+      >
         RIDES
         <i class="fas fa-chevron-down rides-chevron"></i>
       </div>
-      <div class="submenu-items rides">
+      <div style="width: 90%; margin: auto" class="submenu-items rides">
+        <% for (let i = 0; i < rides.length; i++) { %>
         <div
           class="ride-submenu-item"
-          style="background-image: url('/assets/nav_ab.png')"
+          style="background-image: url('<%= rides[i].image %>')"
         >
-          <span>Angry Birds Mini Golf</span>
+          <span><%= rides[i].name %></span>
         </div>
-        <div
-          class="ride-submenu-item"
-          style="background-image: url('/assets/iMUSEUM.png')"
-        >
-          <span>Angry Birds Mini Golf</span>
-        </div>
-        <div
-          class="ride-submenu-item"
-          style="background-image: url('assets/In_the_Game_-_Nav_asset.png')"
-        >
-          <span>Angry Birds Mini Golf</span>
-        </div>
-        <div
-          class="ride-submenu-item"
-          style="background-image: url('/assets/Mirror_Maze-Nav_Bar.png')"
-        >
-          <span>Angry Birds Mini Golf</span>
-        </div>
-        <div
-          class="ride-submenu-item"
-          style="background-image: url('/assets/nav_dwwp.png')"
-        >
-          <span>Angry Birds Mini Golf</span>
-        </div>
-        <div
-          class="ride-submenu-item"
-          style="background-image: url('/assets/nav-activate.png')"
-        >
-          <span>Angry Birds Mini Golf</span>
-        </div>
-        <div
-          class="ride-submenu-item"
-          style="background-image: url('/assets/nav-blast.png')"
-        >
-          <span>Angry Birds Mini Golf</span>
-        </div>
-        <div
-          class="ride-submenu-item"
-          style="background-image: url('/assets/nav-blmg.png')"
-        >
-          <span>Angry Birds Mini Golf</span>
-        </div>
-        <div
-          class="ride-submenu-item"
-          style="background-image: url('/assets/nav-escape.png')"
-        >
-          <span>Angry Birds Mini Golf</span>
-        </div>
-        <div
-          class="ride-submenu-item"
-          style="background-image: url('/assets/nav-legends.png')"
-        >
-          <span>Angry Birds Mini Golf</span>
-        </div>
-        <div
-          class="ride-submenu-item"
-          style="background-image: url('/assets/nav-Paradox.png')"
-        >
-          <span>Angry Birds Mini Golf</span>
-        </div>
-        <div
-          class="ride-submenu-item"
-          style="background-image: url('/assets/nav-rink.png')"
-        >
-          <span>Angry Birds Mini Golf</span>
-        </div>
-        <div
-          class="ride-submenu-item"
-          style="background-image: url('/assets/nav-sea-life.png')"
-        >
-          <span>Angry Birds Mini Golf</span>
-        </div>
-        <div
-          class="ride-submenu-item"
-          style="background-image: url('/assets/nav-surf.png')"
-        >
-          <span>Angry Birds Mini Golf</span>
-        </div>
+        <% } %>
       </div>
-      <hr />
     </li>
   </ul>
 </div>

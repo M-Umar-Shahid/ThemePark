@@ -21,6 +21,29 @@ app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, "public")));
 app.set("view engine", "ejs");
 
+// Middleware to fetch areas and rides for the submenu
+app.use((req, res, next) => {
+  db.all("SELECT * FROM areas", [], (err, areas) => {
+    if (err) {
+      console.error("Error fetching areas:", err);
+      res.locals.areas = [];
+    } else {
+      res.locals.areas = areas;
+    }
+
+    db.all("SELECT * FROM rides", [], (err, rides) => {
+      if (err) {
+        console.error("Error fetching rides:", err);
+        res.locals.rides = [];
+      } else {
+        res.locals.rides = rides;
+      }
+
+      next();
+    });
+  });
+});
+
 // Routes
 app.get("/", (req, res) => {
   res.render("Homepage");
@@ -147,7 +170,7 @@ app.post("/submit-contact", (req, res) => {
         console.error("Error saving contact:", err);
         res.status(500).send("Internal Server Error");
       } else {
-        res.render("ContactUs");
+        res.redirect("/contact");
       }
     }
   );

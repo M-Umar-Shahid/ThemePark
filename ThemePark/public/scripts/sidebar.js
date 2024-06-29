@@ -65,8 +65,8 @@ window.onload = function () {
 
   document.addEventListener("click", function (event) {
     if (!sidebar.contains(event.target) && !subMenu.contains(event.target)) {
-      sidebar.classList.remove("open");
-      subMenu.classList.remove("open");
+      document.getElementById("sidebar").classList.remove("open");
+      document.getElementById(sub - menu).classList.remove("open");
     }
   });
 };

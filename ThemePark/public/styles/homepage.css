@@ -158,6 +158,8 @@ header {
   justify-content: space-around;
   flex-wrap: wrap;
   padding: 20px;
+  width: 80%;
+  margin: auto;
 }
 
 .pass-card {
