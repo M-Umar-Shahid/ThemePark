@@ -15,12 +15,14 @@ body {
 }
 
 .image-heading {
-  background: linear-gradient(to bottom, #ffad00, #ffa500);
+  background: linear-gradient(to bottom, #538ed3, #5793db);
   display: flex;
+  justify-content: space-between;
   padding: 0;
   margin: 0;
   width: 100%;
   padding-top: 10%;
+  padding-bottom: 4%;
   height: fit-content;
   position: absolute;
   top: 40px;
@@ -83,9 +85,11 @@ header {
   line-height: 100%;
   line-height: 1;
   letter-spacing: 1;
+  padding-bottom: 5%;
 }
 
 .hero-image img {
+  padding-right: 20%;
   max-width: 100%;
   height: auto;
 }
@@ -226,7 +230,7 @@ header {
   justify-content: space-between;
   height: 50vh;
   width: 100%;
-  background-color: #ff6801;
+  background-color: #4379b7;
   padding: 0px 20px 0px 20px;
   margin: 20px 0px 20px 0px;
 }
