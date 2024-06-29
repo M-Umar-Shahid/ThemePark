@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Freeman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* styles.css */
+:root {
+  --secondary-color: rgb(255, 217, 0);
+  --secondary-dark-color: rgb(212, 181, 3);
+  --background-color: #222;
+  --text-color: white;
+  --padding-vertical: 10px;
+  --padding-horizontal: 30px;
+  --logo-height: 100px;
+  --link-font-size: 1.2rem;
+  --link-font-weight: 500;
+  --nav-item-spacing: 20px;
+  --gap-spacing: 10px;
+  --max-width: 1200px;
+  --font-family: Freeman, sans-serif;
+}
+
+*,body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family);
+transition: all 0.5s ease-in-out;
+}
+
+/* styles.css */
+
+/* Increase font size and font weight for headings and paragraph */
+h1 {
+  font-size: 3rem; /* Adjust the size as needed */
+  font-weight: 700; /* Increase the weight */
+}
+
+h2 {
+  font-size: 2rem; /* Adjust the size as needed */
+  font-weight: 600; /* Increase the weight */
+}
+
+h3 {
+  font-size: 2rem; /* Adjust the size as needed */
+  font-weight: 500; /* Increase the weight */
+}
+
+h4 {
+  font-size: 1.5rem; /* Adjust the size as needed */
+  font-weight: 500; /* Increase the weight */
+}
+
+p{
+  font-size: 1.4rem; /* Adjust the size as needed */
+  font-weight: 300; /* Adjust the weight as needed */
+  font-family: Roboto, Helvetica, sans-serif
+}
+a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 1rem; /* Adjust the size as needed */
+  font-weight: 300; /* Adjust the weight as needed */
+  font-family: Roboto, Helvetica, sans-serif
+}
+
+header {
+  background-color: var(--background-color);
+  padding: var(--padding-vertical) 0;
+ 
+  width: 100%;
+
+}
+
+section{
+padding: 5%;
+
+  
+}
+/* classes */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--padding-vertical) var(--padding-horizontal);
+}
+
+.navbar > div {
+  color: var(--text-color);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+}
+
+.logo {
+  height: var(--logo-height);
+}
+.logo ~ h2:hover {
+  cursor: pointer;
+  color: var(--secondary-color);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin-right: auto;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: var(--nav-item-spacing);
+}
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: var(--link-font-weight);
+  font-size: var(--link-font-size);
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+  color: var(--secondary-color);
+}
+
+
+
+.banner {
+  padding: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  background-image: url("/images/banner.jpg");
+  overflow: hidden;
+  position: relative;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.39);
+  z-index: 2;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 3;
+  color: white;
+  text-align: center;
+
+}
+
+
+
+
+.banner > div {
+
+width: 60%;
+max-width: 1000px;
+height: 90%;
+max-height: 630px;
+border-radius: 40px ;
+background-color:#222222e8;
+color: var(--text-color);
+padding: 4%  5%;
+display: flex;
+justify-content: start;
+align-items: center;
+flex-direction: column;
+gap: 20px;
+ }
+ 
+ .banner >div h1 {
+
+color: var(--secondary-color);
+   }
+   
+   .banner >div p {
+text-align: left;
+font-size: 1.5rem;
+line-height: 50px;
+word-spacing: 0.2rem; 
+       }
+       
+
+.banner a {
+  text-decoration: none;
+margin-top: 40px;
+  z-index: 100;
+  padding: 2% 42%;
+  color: var(--background-color);
+  background-color: var(--secondary-color);
+}
+
+.banner a:hover {
+  background-color: var(--secondary-dark-color);
+}
+
+
+
+.main > div h2{ 
+margin-bottom: 10px;
+}
+
+
+
+
+
+.attration {
+  color: var(--text-color);
+  padding: 2% 5% 0% 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+
+  background-image: url("/images/vr.jpg");
+  overflow: hidden;
+  text-align: center;
+  position: relative; /* Ensure the pseudo-element is positioned relative to the parent */
+}
+
+.attration::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.39); /* Darkens the background */
+  z-index: 1;
+}
+
+.attration > * {
+  position: relative;
+  z-index: 2; /* Ensure content is above the pseudo-element */
+}
+
+.attration a {
+  margin: 50px;
+ text-decoration: none;
+  font-size: 2rem;
+  padding: 8px 20px;
+  background-color: var(--secondary-color);
+  color: var(--background-color);
+}
+
+
+.attration a:hover {
+  background-color: var(--secondary-dark-color);
+}
+
+
+.main-attractions{
+  position: relative;
+  color: var(--text-color);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust gap between cards as needed */
+  flex-wrap: wrap; /* Ensure the cards wrap on smaller screens */
+ text-align: center;
+width: 80%;
+margin-top: 50px;
+ 
+}
+
+
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  width: 300px; /* Adjust card width as needed */
+  text-align: left;
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: 40%;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card h2 {
+  
+  color: var(--background-color); /* Adjust title color as needed */
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #555;
+}
+
+.card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background-color: var(--secondary-color); /* Adjust border color as needed */
+}
+
+footer {
+
+  padding: 2% 2% 0% 2%;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  padding: var(--padding-vertical) 0;
+  text-align: left;
+  font-family: var(--font-family);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  max-width: 90%;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.footer-section {
+  flex: 1;
+  margin: 0 var(--nav-item-spacing);
+}
+
+.footer-section p {
+  font-size: 1rem;
+  text-transform: uppercase;
+ 
+}
+
+.footer-section h3 {
+  font-size: var(--link-font-size);
+  margin-bottom: var(--gap-spacing);
+  text-transform: uppercase;
+  font-weight: var(--link-font-weight);
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: var(--gap-spacing);
+}
+
+.footer-section ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+
+}
+
+.footer-section ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-section .contact-section p {
+  margin: 5px 0;
+}
+
+.footer-section .logo-section {
+  color: var(--text-color);
+  text-align: center;
+}
+
+.footer-section .logo-section img {
+  max-height: 200px;
+  margin-bottom: var(--gap-spacing);
+}
+
+
+.areas{
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+
+  width: 100%;
+
+  
+
+
+}
+
+
+.areas-cards{
+
+
+  color: var(--text-color);
+ 
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust gap between cards as needed */
+  flex-wrap: wrap; /* Ensure the cards wrap on smaller screens */
+ text-align: center;
+width: 100%;
+margin-top: 50px;
+  
+
+
+}
+
+
+.areas-cards a{
+
+
+  color: var(--secondary-color);
+  background-color: var(--background-color);
+ 
+}

@@ -4,22 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rides & Attractions</title>
-    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/style.css">
   </head>
   <body>
     <header>
-      <div class="logo">
-        <img src="/images/logo.png" alt="Theme Park Logo" />
-      </div>
-      <nav>
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/areas">Areas</a></li>
-          <li><a href="/rides">Rides</a></li>
-          <li><a href="/faq">FAQ</a></li>
-          <li><a href="/contact">Contact Us</a></li>
-        </ul>
-      </nav>
+      <%- include('./component/navbar'); %>
     </header>
     <main>
       <h1>Rides & Attractions</h1>
