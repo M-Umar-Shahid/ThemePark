@@ -5,42 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Theme Park</title>
     <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/Areas.css" />
+    <link rel="stylesheet" href="/styles/navbar.css" />
   </head>
   <body>
     <%- include('components/Navbar') %>
     <main>
-      <section class="hero">
+      <section style="background-color: #ff9c33" class="hero">
         <div
-          style="background: linear-gradient(to bottom, #ffad00, #ffa500)"
-          class="image-heading"
+       
         >
-          <div class="hero-text">
-            <p class="subtitle">The Western Hemisphere's</p>
+          <div class="rides-text">
             <h1>
-              Welcome <br />
-              To The <br />
-              Theme Park
+              Largest  <br />
+              Indoor  <br />
+              Theme Park 
             </h1>
-            <p
-              style="
-                background: rgba(0, 0, 0, 0.5);
-                font-size: 1.2rem;
-                display: flex;
-                justify-content: center;
-                padding: 8px;
-                border-radius: 10px;
-              "
-            >
-              Open every day, April-October from 9am to 7pm
-            </p>
           </div>
           <div class="hero-image">
-            <img src="/assets/Background_image.png" alt="SpongeBob" />
+            <img src="/assets/Background_image.png" alt="Record-Breaking Rides" />
           </div>
         </div>
+   
       </section>
-      <section class="passes">
+      <section >
+        <div class="passes">
         <div class="pass-card">
           <img src="/assets/nav_ab.png" alt="Dream Pass" />
           <div class="card-content">
@@ -81,6 +69,7 @@
             <a href="#">GET TICKETS</a>
           </div>
         </div>
+      </div>
       </section>
       <section style="background-color: #ff6801" class="hero-rides">
         <div
@@ -102,15 +91,7 @@
             <img src="/assets/dog_photo.png" alt="Record-Breaking Rides" />
           </div>
         </div>
-        <div
-          style="
-            display: flex;
-            width: 80%;
-            justify-content: space-between;
-            align-items: center;
-            margin: auto;
-          "
-        >
+        <div class="passes">
           <div class="pass-card">
             <img src="/assets/nav_ab.png" alt="Dream Pass" />
             <div class="card-content">
@@ -118,8 +99,7 @@
               <p>
                 Save when you buy our top two American Dream attractions for one
                 low price - $145 (Save up to 20%). Fall into fun with 1-day
-                admission to both DreamWorks Water Park and Nickelodeon
-                Universe.
+                admission to both DreamWorks Water Park and Nickelodeon Universe.
               </p>
               <a href="#">GET PASSES</a>
             </div>
@@ -135,8 +115,8 @@
                 At a special price of $149, the Summer Season Thrill Pass is
                 perfect for repeat visits! Experience unlimited access to
                 Nickelodeon Universe with heart-pounding rides, character meet &
-                greets and much more. Valid from May 25th, 2024 until September
-                2, 2024.
+                greets and much more. Valid from May 25th, 2024 until September 2,
+                2024.
               </p>
               <a href="#">GET PASSES</a>
             </div>
@@ -146,8 +126,8 @@
             <div class="card-content">
               <h2>All Access Pass</h2>
               <p>
-                All Access Passes are valid for one full day of fun at
-                Nickelodeon Universe with unlimited ride access.
+                All Access Passes are valid for one full day of fun at Nickelodeon
+                Universe with unlimited ride access.
               </p>
               <a href="#">GET TICKETS</a>
             </div>
@@ -155,62 +135,7 @@
         </div>
       </section>
 
-      <footer class="footer">
-        <div class="container">
-          <div class="footer-column">
-            <div class="footer-logo">
-              <img src="/assets/dream_logo.png" alt="Logo" />
-              <h2>England Dream</h2>
-            </div>
-            <div class="social-media">
-              <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="#"><i class="fab fa-twitter"></i></a>
-              <a href="#"><i class="fab fa-pinterest"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-              <a href="#"><i class="fab fa-soundcloud"></i></a>
-            </div>
-          </div>
-          <div class="footer-column">
-            <h3>Pages</h3>
-            <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Gallery</a></li>
-              <li><a href="#">Contacts</a></li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h3>Hours</h3>
-            <ul>
-              <li>Mon - 9:00 am - 7:00 pm</li>
-              <li>Tue - 9:00 am - 7:00 pm</li>
-              <li>Wed - 9:00 am - 7:00 pm</li>
-              <li>Thu - 9:00 am - 7:00 pm</li>
-              <li>Fri - 9:00 am - 7:00 pm</li>
-              <li>Sat - 9:00 am - 7:00 pm</li>
-              <li>Sun - 9:00 am - 7:00 pm</li>
-            </ul>
-          </div>
-          <div class="footer-column">
-            <h3>Contacts</h3>
-            <ul>
-              <li>
-                <i class="fas fa-map-marker-alt"></i> 2800 Bedford Avenue,
-                London, LD 11222
-              </li>
-              <li><i class="fas fa-envelope"></i> Dream@demolink.net</li>
-              <li>
-                <i class="fas fa-phone"></i>
-                <span class="phone-number">123 456 7891</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer-bottom">
-          <p>Copyright 2024 Dream. <a href="#">Privacy Policy</a></p>
-        </div>
-      </footer>
+      <%- include('components/Footer') %>
     </main>
   </body>
 </html>

@@ -28,10 +28,6 @@ window.onload = function () {
     document.getElementById("sub-menu").classList.remove("open");
   });
 
-  document.getElementById("rides-menu").addEventListener("click", function () {
-    document.getElementByClass("submenu-items").classList.add("show");
-  });
-
   parksMenu.addEventListener("click", function () {
     if (parkChevronIcon.classList.contains("rotate")) {
       parkChevronIcon.classList.remove("rotate");
@@ -60,13 +56,6 @@ window.onload = function () {
       document.querySelectorAll(".rides").forEach((content) => {
         content.style.display = "block";
       });
-    }
-  });
-
-  document.addEventListener("click", function (event) {
-    if (!sidebar.contains(event.target) && !subMenu.contains(event.target)) {
-      document.getElementById("sidebar").classList.remove("open");
-      document.getElementById(sub - menu).classList.remove("open");
     }
   });
 };
