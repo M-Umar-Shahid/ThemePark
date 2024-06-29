@@ -44,9 +44,43 @@ app.use((req, res, next) => {
   });
 });
 
-// Routes
+// Routes for areas
 app.get("/", (req, res) => {
-  res.render("Homepage");
+  res.render("FamilyFunArea");
+});
+app.get("/AdventureLand", (req, res) => {
+  res.render("AdventureLandArea");
+});
+app.get("/WildWoods", (req, res) => {
+  res.render("WildWoodsArea");
+});
+
+// Routes for Rides for Family Fun
+app.get("/angry-birds-mini-golf", (req, res) => {
+  res.render("AngryBirdRide");
+});
+app.get("/mirror-maze", (req, res) => {
+  res.render("MirrorMazeRide");
+});
+app.get("/activate", (req, res) => {
+  res.render("ActivateRide");
+});
+// Routes for Rides for AdventureLand
+app.get("/AdventureLand/surf", (req, res) => {
+  res.render("SurfRide");
+});
+app.get("/AdventureLand/legends", (req, res) => {
+  res.render("LegendRide");
+});
+app.get("/AdventureLand/escape", (req, res) => {
+  res.render("EscapeRide");
+});
+// Routes for Rides for WildWoods
+app.get("/WildWoods/sea-life", (req, res) => {
+  res.render("SeaLifeRide");
+});
+app.get("/WildWoods/dreamworks-water-park", (req, res) => {
+  res.render("WaterParkRide");
 });
 
 app.get("/areas", (req, res) => {

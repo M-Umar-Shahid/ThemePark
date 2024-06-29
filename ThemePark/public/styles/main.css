@@ -118,6 +118,10 @@ header {
   align-items: center;
 }
 
+a {
+  text-decoration: none;
+}
+
 .faq-item {
   background: #fff;
   padding: 20px;

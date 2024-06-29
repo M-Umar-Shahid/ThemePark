@@ -16,6 +16,7 @@ db.serialize(() => {
         name TEXT NOT NULL,
         description TEXT NOT NULL,
         image TEXT NOT NULL,
+        url_text TEXT NOT NULL,
         FOREIGN KEY(area_id) REFERENCES areas(id)
     )`);
 
@@ -35,21 +36,15 @@ db.serialize(() => {
     `);
 
   // Insert data into rides
-  db.run(`INSERT INTO rides (area_id, name, description, image) VALUES 
-        (1, 'Angry Birds Mini Golf', 'An exciting mini golf adventure with Angry Birds.', '/assets/nav_ab.png'),
-        (1, 'iMUSEUM', 'Explore the interactive museum.', '/assets/iMUSEUM.png'),
-        (1, 'In the Game', 'Join the immersive gaming experience.', 'assets/In_the_Game_-_Nav_asset.png'),
-        (1, 'Mirror Maze', 'Find your way through the challenging mirror maze.', '/assets/Mirror_Maze-Nav_Bar.png'),
-        (1, 'DreamWorks Water Park', 'Enjoy the splash-tastic fun at the DreamWorks Water Park.', '/assets/nav_dwwp.png'),
-        (2, 'Activate', 'Get active with fun activities and challenges.', '/assets/nav-activate.png'),
-        (2, 'Blast', 'Experience the blast of excitement.', '/assets/nav-blast.png'),
-        (2, 'BLMG', 'Enjoy the thrilling BLMG ride.', '/assets/nav-blmg.png'),
-        (2, 'Escape', 'Try to escape from the challenging rooms.', '/assets/nav-escape.png'),
-        (3, 'Legends', 'Discover the legendary stories.', '/assets/nav-legends.png'),
-        (3, 'Paradox', 'Solve the paradox puzzles.', '/assets/nav-Paradox.png'),
-        (3, 'Rink', 'Skate on the amazing rink.', '/assets/nav-rink.png'),
-        (3, 'Sea Life', 'Explore the wonders of sea life.', '/assets/nav-sea-life.png'),
-        (3, 'Surf', 'Ride the waves at the surf area.', '/assets/nav-surf.png')
+  db.run(`INSERT INTO rides (area_id, name, description, image, url_text) VALUES 
+        (1, 'Angry Birds Mini Golf', 'An exciting mini golf adventure with Angry Birds.', '/assets/nav_ab.png', 'angry-birds-mini-golf'),
+        (1, 'Mirror Maze', 'Find your way through the challenging mirror maze.', '/assets/Mirror_Maze-Nav_Bar.png', 'mirror-maze'),
+        (1, 'Activate', 'Get active with fun activities and challenges.', '/assets/nav-activate.png', 'activate'),
+        (2, 'Surf', 'Ride the waves at the surf area.', '/assets/nav-surf.png', 'surf'),
+        (2, 'Legends', 'Discover the legendary stories.', '/assets/nav-legends.png', 'legends'),
+        (2, 'Escape', 'Try to escape from the challenging rooms.', '/assets/nav-escape.png', 'escape'),
+        (3, 'DreamWorks Water Park', 'Enjoy the splash-tastic fun at the DreamWorks Water Park.', '/assets/nav_dwwp.png', 'dreamworks-water-park'),    
+        (3, 'Sea Life', 'Explore the wonders of sea life.', '/assets/nav-sea-life.png', 'sea-life')
     `);
 });
 

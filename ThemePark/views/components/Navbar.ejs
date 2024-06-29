@@ -59,21 +59,25 @@
         PARKS
         <i class="fas fa-chevron-down parks-chevron"></i>
       </div>
-      <div style="width: 90%; margin: auto" class="submenu-items parks">
-        <div class="submenu-items parks">
+      <div class="submenu-items parks">
+        <a style="text-decoration: none" href="/">
           <div class="submenu-item" id="nicku">
-            <span><%= areas[0].name %></span>
+            <span><%= areas[1].name %></span>
             <img src="<%= areas[0].image %>" alt="Nickelodeon Universe" />
           </div>
+        </a>
+        <a style="text-decoration: none" href="/AdventureLand">
           <div class="submenu-item" id="dwwp">
-            <span><%= areas[1].name %></span>
+            <span><%= areas[0].name %></span>
             <img src="<%= areas[1].image %>" alt="DreamWorks Water Park" />
           </div>
+        </a>
+        <a style="text-decoration: none" href="/WildWoods">
           <div class="submenu-item" id="bs">
             <span><%= areas[2].name %></span>
             <img src="<%= areas[2].image %>" alt="Big SNOW" />
           </div>
-        </div>
+        </a>
       </div>
     </li>
     <li>
@@ -85,14 +89,18 @@
         RIDES
         <i class="fas fa-chevron-down rides-chevron"></i>
       </div>
-      <div style="width: 90%; margin: auto" class="submenu-items rides">
+      <div class="submenu-items rides">
         <% for (let i = 0; i < rides.length; i++) { %>
-        <div
-          class="ride-submenu-item"
-          style="background-image: url('<%= rides[i].image %>')"
+        <a
+          href="/<%= rides[i].area_id === 2 ? `AdventureLand/${rides[i].url_text}` : rides[i].area_id === 3 ? `WildWoods/${rides[i].url_text}` : `${rides[i].url_text}` %>"
         >
-          <span><%= rides[i].name %></span>
-        </div>
+          <div
+            class="ride-submenu-item"
+            style="background-image: url('<%= rides[i].image %>')"
+          >
+            <span><%= rides[i].name %></span>
+          </div>
+        </a>
         <% } %>
       </div>
     </li>
