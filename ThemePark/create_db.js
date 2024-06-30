@@ -75,7 +75,7 @@ db.serialize(() => {
         
         (3, 'DreamWorks Water Park', 'DreamWorks Water Park is a splash-tastic destination where visitors can enjoy a variety of water slides, wave pools, and lazy rivers. Featuring beloved characters from DreamWorks animations, this water park combines fun and fantasy, making it a perfect spot for cooling off and having fun.', '/images/nav_dwwp.png', '/WildWoods/dreamworks-water-park', 
         '/images/dwwp1.jpg', 'An aerial view of the water park, showcasing various water slides and pools.', 
-        '/images/dwwp2.jpg', 'Kids playing in a shallow pool with DreamWorks characters\' sculptures around.', 
+        '/images/dwwp2.jpg', 'Kids playing in a shallow pool with DreamWorks characters'' sculptures around.', 
         '/images/dwwp3.jpg', 'A family floating down a lazy river, surrounded by lush greenery and playful water features.'),    
         
         (3, 'Sea Life', 'Sea Life is an enchanting attraction that allows visitors to explore the underwater world and its many wonders. With a wide range of marine exhibits, interactive touch pools, and educational displays, Sea Life offers an immersive and educational experience that highlights the beauty and diversity of ocean life.', '/images/nav-sea-life.png', '/WildWoods/sea-life', 
