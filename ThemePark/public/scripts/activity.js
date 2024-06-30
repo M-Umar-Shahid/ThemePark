@@ -4,12 +4,17 @@ document.addEventListener('DOMContentLoaded', function () {
     const tiles = [];
 
     function createTiles() {
+        const screenWidth = window.innerWidth;
+        const tileSize = screenWidth < 576 ? 70 : 100;
+
         for (let i = 0; i < 5; i++) {
             for (let j = 0; j < 5; j++) {
                 const tile = document.createElement('div');
                 tile.classList.add('tile');
-                tile.style.top = `${i * 100}px`;
-                tile.style.left = `${j * 100}px`;
+                tile.style.top = `${i * tileSize}px`;
+                tile.style.left = `${j * tileSize}px`;
+                tile.style.width = `${tileSize}px`;
+                tile.style.height = `${tileSize}px`;
                 tile.addEventListener('click', () => revealTile(tile));
                 tiles.push(tile);
                 gameContainer.appendChild(tile);
@@ -27,5 +32,5 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     createTiles();
-    setTimeout(revealImage, 100); // Reveal the image after 30 seconds if not all tiles are clicked
+    setTimeout(revealImage, 10); // Reveal the image after 10 seconds if not all tiles are clicked
 });

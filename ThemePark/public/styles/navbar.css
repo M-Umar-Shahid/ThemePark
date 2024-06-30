@@ -262,6 +262,7 @@ form button:hover {
   left: 0;
 }
 
+
 /* Submenu Styles */
 
 .sub-menu {
@@ -323,6 +324,13 @@ form button:hover {
   color: #fff;
 }
 
+.open-mobile{
+  top: 44px;
+  left: 0;
+  opacity: 1;
+  visibility: visible;
+   
+}
 .rotate {
   transform: rotate(180deg);
   transition: transform 0.3s ease;

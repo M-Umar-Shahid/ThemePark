@@ -115,7 +115,7 @@
       <div class="submenu-items rides">
         <% for (let i = 0; i < rides.length; i++) { %>
         <a
-          href="/<%= rides[i].area_id === 2 ? `AdventureLand/${rides[i].url_text}` : rides[i].area_id === 3 ? `WildWoods/${rides[i].url_text}` : `${rides[i].url_text}` %>"
+          href="<%= rides[i].area_id === 2 ? `${rides[i].url_text}` : rides[i].area_id === 3 ? `${rides[i].url_text}` : `${rides[i].url_text}` %>"
         >
           <div
             class="ride-submenu-item"
