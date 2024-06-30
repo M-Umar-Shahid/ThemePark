@@ -24,10 +24,6 @@ window.onload = function () {
       document.getElementById("sub-menu").classList.remove("open");
     });
 
-  document.getElementById("events").addEventListener("mouseover", function () {
-    document.getElementById("sub-menu").classList.remove("open");
-  });
-
   parksMenu.addEventListener("click", function () {
     if (parkChevronIcon.classList.contains("rotate")) {
       parkChevronIcon.classList.remove("rotate");
