@@ -11,18 +11,17 @@
   <body>
     <%- include('components/Navbar') %>
     <main>
-      <section style="background-color: #4fb5ff" class="hero">
-        <div>
-          <div class="rides-text">
+      <section style="background-color: <%= pageData.section1Color %>" class="hero">
+        <div style="width: 100%;">
+          <div class="rides-text" style="width: 69%;">
             <h1>
-              Largest <br />
-              Indoor <br />
-              Theme Park
+                <%= ride.name %>
             </h1>
+            <p id="open-time"> <%= ride.description %></p>
           </div>
-          <div class="hero-image">
+          <div class="hero-image" style="width: 40%;">
             <img
-              src="/images/shrek_and_tigress.png"
+              src=<%= pageData.section1Img %>
               alt="Record-Breaking Rides"
             />
           </div>
@@ -31,29 +30,24 @@
       <section>
         <div class="passes">
      
-          <% if (adventuresRides && adventuresRides.length > 0) { %>
-          
-            <% adventuresRides.forEach(ride => { %>
+         
               <div class="pass-card">
-                <img src="<%= ride.image %>" alt="<%- ride.name %>" />
+                <img src="<%- pageData.section1Img  %>" alt="<%- ride.name %>" />
                 <div class="card-content">
                   <h2><%- ride.name %></h2>
                   <p>
                   
                     <%= ride.description %>
                   </p>
-                  <a href="/<%= ride.url_text %>">Explore</a>
                 </div>
               </div>
-            <% }); %>
-          <% } %>
+       
           
 
     
         </div>
       </section>
-  
-      <section style="background-color: #0f61ff" class="hero-rides">
+      <section style="background-color: <%= pageData.section2Color %> " class="hero-rides">
         <div
        
         >
@@ -65,7 +59,7 @@
             </h1>
           </div>
           <div class="rides-image">
-            <img src="/images/BG_Image__1_.png" alt="Record-Breaking Rides" />
+            <img  src=<%= pageData.section2Img %> alt="Record-Breaking Rides" />
           </div>
         </div>
         <div class="passes">
@@ -95,7 +89,6 @@
           </div>
         </div>
       </section>
-   
 
       <%- include('components/Footer') %>
     </main>

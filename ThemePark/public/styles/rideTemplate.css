@@ -1,0 +1,118 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ride-section {
+    padding: 10%;
+    color: white;
+}
+
+.back-link {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.ride-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+.ride-text {
+    width: 65%;
+}
+
+.ride-text h1 {
+    font-size: 2.5rem;
+}
+
+.ride-text p {
+    font-size: 1.2rem;
+}
+.ride-image {
+    width: 100%;
+    height:100%;
+}
+.ride-image img {
+    height:100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.ride-requirements {
+    padding: 10px;
+    text-align: center;
+    font-size: 1.2rem;
+    color: black;
+}
+
+.gallery-section {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery img {
+    width: 30%;
+    border-radius: 10px;
+}
+
+.adventures-section {
+    padding: 20px;
+    color: white;
+}
+
+.adventures-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.adventures {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.adventure-card {
+    flex: 1;
+    text-align: center;
+}
+
+.adventure-card img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.adventure-card p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+@media (max-width: 992px) {
+    .ride-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+    }
+  }
+  

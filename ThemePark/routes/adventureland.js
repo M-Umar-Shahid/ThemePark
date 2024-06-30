@@ -23,14 +23,58 @@ router.get("/", (req, res) => {
 
 
 router.get("/surf", (req, res) => {
-  res.render("SurfRide");
+  const pageData = {
+    
+    section1Img : "/images/surf_bg2.png",
+    section1Color :"#00ccff",
+    section2Img : "/images/sirf_bg1.png",
+    section2Color :"#00d9ff",
+    
+  }
+
+  db.all("SELECT * FROM rides WHERE id = ?", [4], (err, rows) => {
+    if (err) {
+      return res.status(500).send("Database query failed");
+    }
+   
+    res.render("RidesTemplate", { ride: rows[0], pageData});
+  });
 });
 router.get("/legends", (req, res) => {
-  res.render("LegendRide");
+  const pageData = {
+    section1Img : "/images/legends_bg1.png",
+    section1Color :"#a10033",
+    section2Img : "/images/LegendsLogo.png",
+    section2Color :"#a10033",
+    
+  }
+
+  db.all("SELECT * FROM rides WHERE id = ?", [5], (err, rows) => {
+    if (err) {
+      return res.status(500).send("Database query failed");
+    }
+
+    res.render("RidesTemplate", { ride: rows[0], pageData});
+  });
 });
 router.get("/escape", (req, res) => {
-  res.render("EscapeRide");
+  const pageData = {
+    section1Img : "/images/escape_bg1.jpg",
+    section1Color :"#1f1f1f",
+    section2Img : "/images/LegendsLogo.png",
+    section2Color :"#1f1f1f",
+    
+  }
+
+  db.all("SELECT * FROM rides WHERE id = ?", [6], (err, rows) => {
+    if (err) {
+      return res.status(500).send("Database query failed");
+    }
+
+    res.render("RidesTemplate", { ride: rows[0], pageData});
+  });
 });
+
 
 
 module.exports = router;

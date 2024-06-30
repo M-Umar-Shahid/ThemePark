@@ -21,10 +21,38 @@ router.get("/", (req, res) => {
 });
 
 router.get("/dreamworks-water-park", (req, res) => {
-  res.render("WaterParkRide");
+  const pageData = {
+    section1Img : "/images/card_2.png",
+    section1Color :"#9f279f",
+    section2Img : "/images/card_1.png",
+    section2Color :"#9f279f",
+    
+  }
+
+  db.all("SELECT * FROM rides WHERE id = ?", [7], (err, rows) => {
+    if (err) {
+      return res.status(500).send("Database query failed");
+    }
+
+    res.render("RidesTemplate", { ride: rows[0], pageData});
+  });
 });
 router.get("/sea-life", (req, res) => {
-  res.render("SeaLifeRide");
+  const pageData = {
+    section1Img : "/images/sea_life_1.png",
+    section1Color :"#2d9ddd",
+    section2Img : "/images/sea_life_2.png",
+    section2Color :"#2d9ddd",
+    
+  }
+
+  db.all("SELECT * FROM rides WHERE id = ?", [8], (err, rows) => {
+    if (err) {
+      return res.status(500).send("Database query failed");
+    }
+
+    res.render("RidesTemplate", { ride: rows[0], pageData});
+  });
 });
 
 module.exports = router;
