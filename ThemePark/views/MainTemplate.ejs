@@ -11,7 +11,7 @@
   <body>
     <%- include('components/Navbar') %>
     <main>
-      <section style="background-color: #4fb5ff" class="hero">
+      <section style="background-color: <%= pageData.section1Color %>" class="hero">
         <div>
           <div class="rides-text">
             <h1>
@@ -19,10 +19,11 @@
               Indoor <br />
               Theme Park
             </h1>
+            <p id="open-time">Open every day, April-October from 9am to 7pm</p>
           </div>
           <div class="hero-image">
             <img
-              src="/images/shrek_and_tigress.png"
+              src=<%= pageData.section1Img %>
               alt="Record-Breaking Rides"
             />
           </div>
@@ -35,14 +36,14 @@
           
             <% adventuresRides.forEach(ride => { %>
               <div class="pass-card">
-                <img src="<%= ride.image %>" alt="<%- ride.name %>" />
+                <img src="<%- ride.image %>" alt="<%- ride.name %>" />
                 <div class="card-content">
                   <h2><%- ride.name %></h2>
                   <p>
                   
                     <%= ride.description %>
                   </p>
-                  <a href="/<%= ride.url_text %>">Explore</a>
+                  <a href="http://localhost:5000<%- ride.url_text %>">Explore</a>
                 </div>
               </div>
             <% }); %>
@@ -52,8 +53,7 @@
     
         </div>
       </section>
-  
-      <section style="background-color: #0f61ff" class="hero-rides">
+      <section style="background-color: <%= pageData.section2Color %> " class="hero-rides">
         <div
        
         >
@@ -65,7 +65,7 @@
             </h1>
           </div>
           <div class="rides-image">
-            <img src="/images/BG_Image__1_.png" alt="Record-Breaking Rides" />
+            <img  src=<%= pageData.section2Img %> alt="Record-Breaking Rides" />
           </div>
         </div>
         <div class="passes">
@@ -95,7 +95,6 @@
           </div>
         </div>
       </section>
-   
 
       <%- include('components/Footer') %>
     </main>

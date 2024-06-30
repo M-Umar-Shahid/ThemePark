@@ -58,11 +58,19 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+#open-time {
+  margin-top: 5%;
+
+  background: rgba(0, 0, 0, 0.5);
+  padding: 8px;
+  border-radius: 10px;
+}
 .hero-image {
   position: absolute;
   bottom: -1%;
   right: 0;
-  width: 30%;
+  width: 20%;
+  max-width: 30%;
 }
 .hero-image img {
   width: 100%;
@@ -72,7 +80,7 @@ header {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  width: 80%;
+
   margin: auto;
   padding: 5%;
   gap: 2%;
@@ -85,7 +93,7 @@ header {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   min-width: 370px;
-  text-align: center;
+  text-align: start;
   flex: 1 1 calc(33.333% - 20px); /* Adjusts the spacing between cards */
 }
 
@@ -130,8 +138,16 @@ header {
   height: 50vh;
   width: 100%;
   background-color: #4379b7;
-  padding: 0px 20px 0px 20px;
-  margin: 20px 0px 20px 0px;
+  padding: 5%;
+ 
+}
+.hero-rides >div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+
 }
 
 .rides-text {
@@ -144,7 +160,6 @@ header {
   font-weight: 900;
   text-align: start;
   line-height: 1;
-  margin-left: 10%;
 }
 
 .rides-image img {
@@ -173,11 +188,7 @@ header {
   max-width: 80%;
 }
 
-@media (max-width: 576px) {
-  .rides-text h1 {
-    font-size: 2.5rem;
-  }
-}
+
 
 /* Ride Cards Section Styles */
 .ride-cards {
@@ -238,7 +249,13 @@ header {
   .ride-card {
     flex: 1 1 calc(100% - 20px);
   }
-
+  .hero-rides >div {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
   .hero-rides {
     flex-direction: column;
     text-align: center;
@@ -250,12 +267,13 @@ header {
     margin-bottom: 20px;
   }
 
-  .rides-text h2 {
+  .rides-text h1 {
     font-size: 3rem;
+    text-align: center;
   }
 
   .rides-image img {
-    max-width: 80%;
+    max-width: 100%;
   }
   .container {
     flex-direction: column;
@@ -265,6 +283,17 @@ header {
   .pass-card {
     flex: 1 1 calc(100% - 20px);
   }
+  .hero > div {
+ 
+    flex-direction: column;
+}
+.hero-image {
+ 
+    position: static;
+    
+    width: 100%;
+     max-width: 100%;
+}
 }
 
 @media (max-width: 992px) {
@@ -275,17 +304,28 @@ header {
   .pass-card {
     flex: 1 1 calc(45% - 20px);
   }
+  .rides-text h1 {
+    font-size: 4rem;
+  }
 }
 
 @media (max-width: 576px) {
-  .rides-text h2 {
-    font-size: 2.5rem;
-  }
+
   .pass-card {
     min-width: 300px;
   }
 
+  .rides-text h1 {
+    font-size: 2.5rem;
+  }
   .header-title {
     font-size: 1rem;
   }
+  .passes {
+  
+    width: 100%; 
+ 
+} .rides-text h1 {
+  font-size: 2.5rem;
+}
 }

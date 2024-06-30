@@ -30,21 +30,21 @@ db.serialize(() => {
 
   // Insert data into areas
   db.run(`INSERT INTO areas (name, description, image) VALUES 
-        ('Adventure Land', 'A land full of adventures and thrill.', '/assets/nav-nicku.png'),
-        ('Family Fun', 'A perfect place for families with young children.', '/assets/nav_dwwp.png'),
-        ('Wild Woods', 'A wild area with rides and a zoo/Sealife area.', '/assets/nav-bs.png')
+        ('Adventure Land', 'Adventure Land is an exhilarating area filled with high-energy activities and thrilling rides designed to give visitors a heart-pounding experience. With a variety of attractions that challenge the senses and push the limits of fun, Adventure Land promises an unforgettable journey for thrill-seekers of all ages.', '/images/nav-nicku.png'),
+        ('Family Fun', 'Family Fun area offers a delightful array of attractions perfect for families with young children. This vibrant section of the park is designed to entertain and engage younger visitors with playful rides and activities that ensure a memorable day for the entire family.', '/images/nav_dwwp.png'),
+        ('Wild Woods', 'Wild Woods is an enchanting area that combines the excitement of thrilling rides with the wonders of a zoo and Sealife exhibits. Visitors can immerse themselves in the beauty of nature while enjoying adrenaline-pumping attractions and exploring the diverse wildlife habitats.', '/images/nav-bs.png')
     `);
 
   // Insert data into rides
   db.run(`INSERT INTO rides (area_id, name, description, image, url_text) VALUES 
-        (1, 'Angry Birds Mini Golf', 'An exciting mini golf adventure with Angry Birds.', '/assets/nav_ab.png', 'angry-birds-mini-golf'),
-        (1, 'Mirror Maze', 'Find your way through the challenging mirror maze.', '/assets/Mirror_Maze-Nav_Bar.png', 'mirror-maze'),
-        (1, 'Activate', 'Get active with fun activities and challenges.', '/assets/nav-activate.png', 'activate'),
-        (2, 'Surf', 'Ride the waves at the surf area.', '/assets/nav-surf.png', 'surf'),
-        (2, 'Legends', 'Discover the legendary stories.', '/assets/nav-legends.png', 'legends'),
-        (2, 'Escape', 'Try to escape from the challenging rooms.', '/assets/nav-escape.png', 'escape'),
-        (3, 'DreamWorks Water Park', 'Enjoy the splash-tastic fun at the DreamWorks Water Park.', '/assets/nav_dwwp.png', 'dreamworks-water-park'),    
-        (3, 'Sea Life', 'Explore the wonders of sea life.', '/assets/nav-sea-life.png', 'sea-life')
+        (1, 'Angry Birds Mini Golf', 'Angry Birds Mini Golf offers an exciting and interactive experience where players can enjoy a fun-filled mini golf adventure with their favorite Angry Birds characters. Navigate through creatively designed holes, each presenting unique challenges and surprises that make for a fantastic family-friendly activity.', '/images/nav_ab.png', '/angry-birds-mini-golf'),
+        (1, 'Mirror Maze', 'The Mirror Maze is a captivating attraction that challenges visitors to find their way through a labyrinth of reflective glass and mirrors. With twists and turns at every corner, this maze provides a mind-bending and visually stunning experience that is both fun and disorienting.', '/images/Mirror_Maze-Nav_Bar.png', '/mirror-maze'),
+        (1, 'Activate', 'Activate is a dynamic area that encourages guests to get moving with a variety of physical activities and challenges. Whether climbing, jumping, or engaging in other energetic pursuits, Activate offers a space where visitors can enjoy active fun and push their limits in a safe and exciting environment.', '/images/nav-activate.png', '/activate'),
+        (2, 'Surf', 'The Surf area lets visitors ride the waves and experience the thrill of surfing without needing to hit the beach. This attraction features simulated waves and expert instructors, providing a realistic surfing experience that is perfect for both beginners and seasoned surfers.', '/images/nav-surf.png', '/AdventureLand/surf'),
+        (2, 'Legends', 'Legends is an attraction where guests can delve into the mythical and historical stories that have fascinated people for generations. Through engaging displays and interactive exhibits, visitors can explore these legendary tales and uncover the secrets behind them.', '/images/nav-legends.png', '/AdventureLand/legends'),
+        (2, 'Escape', 'Escape offers a series of themed rooms where visitors must use their wits and teamwork to solve puzzles and find their way out. Each room presents a unique set of challenges and scenarios, making Escape a thrilling and intellectually stimulating adventure for groups.', '/images/nav-escape.png', '/AdventureLand/escape'),
+        (3, 'DreamWorks Water Park', 'DreamWorks Water Park is a splash-tastic destination where visitors can enjoy a variety of water slides, wave pools, and lazy rivers. Featuring beloved characters from DreamWorks animations, this water park combines fun and fantasy, making it a perfect spot for cooling off and having fun.', '/images/nav_dwwp.png', '/WildWoods/dreamworks-water-park'),    
+        (3, 'Sea Life', 'Sea Life is an enchanting attraction that allows visitors to explore the underwater world and its many wonders. With a wide range of marine exhibits, interactive touch pools, and educational displays, Sea Life offers an immersive and educational experience that highlights the beauty and diversity of ocean life.', '/images/nav-sea-life.png', '/WildWoods/sea-life')
     `);
 });
 

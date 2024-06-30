@@ -7,8 +7,8 @@ body {
   top: 5%;
 }
 main {
-  background-image: url(/assets/contact_bg.jpg);
-  height: 100vh;
+  background-image: url(/images/contact_bg.jpg);
+  padding: 10% 5%;
 }
 #contact-title {
   display: block;
@@ -31,13 +31,15 @@ form {
   display: flex;
   flex-direction: column;
   max-width: 600px;
-  margin: 50px auto;
+  margin: auto;
   padding: 40px;
+ 
+
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(10px);
-  border-radius: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 label {
@@ -69,5 +71,4 @@ button:hover {
 
 .form-group {
   position: relative;
-  margin-bottom: 20px;
 }

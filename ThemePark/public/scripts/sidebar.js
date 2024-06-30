@@ -6,11 +6,13 @@ window.onload = function () {
   const rideChevronIcon = ridesMenu.querySelector(".rides-chevron");
   document.getElementById("menu-toggle").addEventListener("click", function () {
     document.getElementById("sidebar").classList.add("open");
+    document.getElementById("sub-menu").classList.remove("open-mobile");
   });
 
   document.getElementById("close-btn").addEventListener("click", function () {
     document.getElementById("sidebar").classList.remove("open");
     document.getElementById("sub-menu").classList.remove("open");
+    document.getElementById("sub-menu").classList.remove("open-mobile");
   });
 
   parksRidesLabel.addEventListener("mouseover", function () {
@@ -23,11 +25,7 @@ window.onload = function () {
     .addEventListener("mouseleave", function () {
       document.getElementById("sub-menu").classList.remove("open");
     });
-
-  document.getElementById("events").addEventListener("mouseover", function () {
-    document.getElementById("sub-menu").classList.remove("open");
-  });
-
+  
   parksMenu.addEventListener("click", function () {
     if (parkChevronIcon.classList.contains("rotate")) {
       parkChevronIcon.classList.remove("rotate");
@@ -58,4 +56,17 @@ window.onload = function () {
       });
     }
   });
+
+  if (window.innerWidth < 576) {
+    console.log("sasdads")
+    parksRidesLabel.addEventListener("click",()=>{
+      document.getElementById("sidebar").classList.remove("open");
+      document.getElementById("sub-menu").style.display = "block";
+      document.getElementById("sub-menu").classList.add("open-mobile");
+    })
+  }
+
 };
+
+
+

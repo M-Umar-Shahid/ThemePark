@@ -24,7 +24,7 @@
     <li id="parks-rides-label">
       <div>
         <img
-          src="/assets/dreamwheel_icon.svg"
+          src="/images/dreamwheel_icon.svg"
           alt="Parks & Tickets"
           class="sidebar-icon"
         />
@@ -32,32 +32,42 @@
       </div>
       <i class="fas fa-chevron-right"></i>
     </li>
-    <a href="/contact">
-      <li id="events">
+    <li id="contact">
+      <a href="/contact">
         <div>
           <img
-            src="/assets/contact1.png"
+            src="/images/contact1.png"
             alt="Passes & Seasonal Offers"
             class="sidebar-icon"
           />
           CONTACT US
         </div>
-        <!-- <i class="fas fa-chevron-right"></i> -->
-      </li>
-    </a>
-    <a href="/faq">
-      <li id="contact">
+      </a>
+    </li>
+    <li id="faq">
+      <a href="/faq">
         <div>
           <img
-            src="/assets/contact.png"
+            src="/images/contact.png"
             alt="Passes & Seasonal Offers"
             class="sidebar-icon"
           />
           FAQ
         </div>
-        <!-- <i class="fas fa-chevron-right"></i> -->
-      </li>
-    </a>
+      </a>
+    </li>
+    <li id="activity">
+      <a href="/activity">
+        <div>
+          <img
+            src="/images/rollercoster_icon.svg"
+            alt="Passes & Seasonal Offers"
+            class="sidebar-icon"
+          />
+          ACTIVITY
+        </div>
+      </a>
+    </li>
   </ul>
 </div>
 
@@ -105,7 +115,7 @@
       <div class="submenu-items rides">
         <% for (let i = 0; i < rides.length; i++) { %>
         <a
-          href="/<%= rides[i].area_id === 2 ? `AdventureLand/${rides[i].url_text}` : rides[i].area_id === 3 ? `WildWoods/${rides[i].url_text}` : `${rides[i].url_text}` %>"
+          href="<%= rides[i].area_id === 2 ? `${rides[i].url_text}` : rides[i].area_id === 3 ? `${rides[i].url_text}` : `${rides[i].url_text}` %>"
         >
           <div
             class="ride-submenu-item"
