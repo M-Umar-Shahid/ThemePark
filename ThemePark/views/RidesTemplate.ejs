@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Theme Park</title>
-    <link rel="stylesheet" href="/styles/main.css" />
-    <link rel="stylesheet" href="/styles/navbar.css" />
-    <link rel="stylesheet" href="/styles/footer.css" />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png">
+    <link rel="stylesheet" href="/styles/main.css" >
+    <link rel="stylesheet" href="/styles/navbar.css" >
+    <link rel="stylesheet" href="/styles/footer.css" >
   </head>
   <body>
     <%- include('components/Navbar') %>
@@ -23,24 +24,24 @@
             <img
               src=<%= pageData.section1Img %>
               alt="Record-Breaking Rides"
-            />
+            >
           </div>
         </div>
       </section>
-      <section>
+      <section id="gallery" >
+        <h2>Gallery</h2>
         <div class="passes">
      
-         
+          
           
           
             
              
               <div class="pass-card">
-                <img src="<%- ride.image1 %>" style="height: 200px;"/>
+                <img src="<%- ride.image1 %>" style="height: 200px;"   alt="Record Breaking Rides">
                 <div class="card-content">
-              
+          
                   <p>
-                  
                     <%= ride.image1_desc %>
                   </p>
           
@@ -50,7 +51,7 @@
      
               
               <div class="pass-card">
-                <img src="<%- ride.image2 %>" style="height: 200px;" />
+                <img src="<%- ride.image2 %>" style="height: 200px;"    alt="Record Breaking Rides">
                 <div class="card-content">
               
                   <p>
@@ -62,7 +63,7 @@
               </div>
          
               <div class="pass-card">
-                <img src="<%- ride.image3 %>" style="height: 200px;" />
+                <img src="<%- ride.image3 %>" style="height: 200px;"   alt="Record Breaking Rides" >
                 <div class="card-content">
               
                   <p>
@@ -87,18 +88,18 @@
         >
           <div class="rides-text">
             <h1>
-              Record- <br />
-              Breaking <br />
+              Record- <br >
+              Breaking <br >
               Rides & Attractions
             </h1>
           </div>
           <div class="rides-image">
-            <img  src=<%= pageData.section2Img %> alt="Record-Breaking Rides" />
+            <img  src=<%= pageData.section2Img %> alt="Record-Breaking Rides" >
           </div>
         </div>
         <div class="passes">
           <div class="pass-card">
-            <img src="<%= rides[0].image %>" alt="Dream Pass" />
+            <img src="<%= rides[0].image %>" alt="Dream Pass" >
             <div class="card-content">
               <h2><%= rides[0].name %></h2>
               <p><%= rides[0].description %></p>
@@ -106,7 +107,7 @@
             </div>
           </div>
           <div class="pass-card">
-            <img src="<%= rides[1].image %>" alt="Summer Season Thrill Pass" />
+            <img src="<%= rides[1].image %>" alt="Summer Season Thrill Pass" >
             <div class="card-content">
               <h2><%= rides[1].name %></h2>
               <p><%= rides[1].description %></p>
@@ -114,7 +115,7 @@
             </div>
           </div>
           <div class="pass-card">
-            <img src="<%= rides[3].image %>" alt="All Access Pass" />
+            <img src="<%= rides[3].image %>" alt="All Access Pass" >
             <div class="card-content">
               <h2><%= rides[3].name %></h2>
               <p><%= rides[3].description %></p>

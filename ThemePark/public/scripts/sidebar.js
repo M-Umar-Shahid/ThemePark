@@ -58,7 +58,6 @@ window.onload = function () {
   });
 
   if (window.innerWidth < 576) {
-    console.log("sasdads")
     parksRidesLabel.addEventListener("click",()=>{
       document.getElementById("sidebar").classList.remove("open");
       document.getElementById("sub-menu").style.display = "block";

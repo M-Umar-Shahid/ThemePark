@@ -141,7 +141,7 @@ header {
   padding: 5%;
  
 }
-.hero-rides >div {
+.hero-rides ~ div {
   width: 100%;
   display: flex;
   align-items: center;
@@ -185,6 +185,12 @@ header {
 
 .rides-image img {
   max-width: 80%;
+}
+#gallery{
+  text-align: center; padding-top: 4%;
+}
+#gallery h2 {
+  font-size: 4rem;
 }
 
 
@@ -248,7 +254,7 @@ header {
   .ride-card {
     flex: 1 1 calc(100% - 20px);
   }
-  .hero-rides >div {
+  .hero-rides ~ div {
     width: 100%;
     display: flex;
     align-items: center;
@@ -292,6 +298,10 @@ header {
     
     width: 100%;
      max-width: 100%;
+}
+
+#gallery h2 {
+  font-size: 2rem;
 }
 }
 

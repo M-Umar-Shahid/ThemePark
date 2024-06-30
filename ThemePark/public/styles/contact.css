@@ -1,21 +1,31 @@
 /* contact.css */
 body {
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 #form-section {
   position: relative;
   top: 5%;
 }
+
 main {
   background-image: url(/images/contact_bg.jpg);
   padding: 10% 5%;
+  background-size: cover;
+  background-position: center;
 }
+
 #contact-title {
   display: block;
   margin: auto;
   color: aliceblue;
   width: fit-content;
+  text-align: center;
 }
+
 input.error,
 textarea.error {
   border: 2px solid red;
@@ -33,8 +43,6 @@ form {
   max-width: 600px;
   margin: auto;
   padding: 40px;
- 
-
   border-radius: 30px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   background: rgba(255, 255, 255, 0.1);
@@ -50,10 +58,16 @@ label {
 input,
 textarea {
   padding: 10px;
-  /* margin-top: 5px; */
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   border: 1px solid #ccc;
   border-radius: 50px;
+  background: rgba(255, 255, 255, 0.7);
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border-color: #666;
 }
 
 button {
@@ -71,4 +85,36 @@ button:hover {
 
 .form-group {
   position: relative;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  main {
+    padding: 15% 5%;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  input,
+  textarea {
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  form {
+    padding: 15px;
+  }
+
+  input,
+  textarea {
+    padding: 8px;
+    margin-bottom: 8px;
+  }
+
+  button {
+    padding: 8px;
+  }
 }

@@ -3,9 +3,7 @@
     width: 500px;
     height: 500px;
     margin: auto;
-
-    background: url('/images/image.png') no-repeat center center;
-    background-size: cover;
+    margin-top: 50px;
 }
 
 .tile {
@@ -25,51 +23,32 @@
 
 .activity {
     color: white;
- 
-padding: 2%;
-text-align: center;
-background-color: #f87489;
+    padding: 2%;
+    text-align: center;
+    background-color: #f87489;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
 }
-.activity {
-display: flex;
-flex-direction: column;
 
-margin: auto;
-}
-.activity  h1{
-  
+.activity h1 {
     font-size: 2rem;
     font-weight: bolder;
-    }
+}
 
-    .activity  p{
-  
-        font-size: 1.5rem;
-        }
-    
-
-#game-container{
-    margin-top: 50px;
+.activity p {
+    font-size: 1.5rem;
 }
 
 @media (max-width: 576px) {
-    
-
-
     #game-container {
-        width:  100%;
+        width: 100%;
         height: 100%;
         margin: 50px auto;
     }
+
     .tile {
-        position: absolute;
         width: 70px;
         height: 70px;
-        background-color: #fcbe78;
-        cursor: pointer;
-        border: 1px solid white;
     }
-
-    
-  }
-
+}
