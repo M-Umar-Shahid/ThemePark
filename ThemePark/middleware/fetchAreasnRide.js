@@ -1,4 +1,5 @@
 const db = require("../connection");
+db.op
 // Function to fetch areas and rides
 function fetchAreasAndRides(req, res, next) {
   db.all("SELECT * FROM areas", [], (err, areas) => {
@@ -19,6 +20,7 @@ function fetchAreasAndRides(req, res, next) {
       next();
     });
   });
+
 }
 
 module.exports = fetchAreasAndRides;

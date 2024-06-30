@@ -1,44 +1,38 @@
 /* faq.css */
 main {
-  width: 100%;
-  height: auto;
-  background-image: url(/assets/faq.jpg);
+  background-size: cover;
+  background-image: url(/images/faq.jpg);
+  background-position: center;
 }
 #faq-section {
   width: 100%;
   margin: auto;
-  padding: 0px 10px 10px 10px;
+  padding: 13%;
   background-color: transparent;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
 #faq-title {
-  text-align: center;
-  font-size: 2.5em;
   color: white;
   margin-bottom: 20px;
 }
 
 .faq-list {
-  width: fit-content;
-  margin: auto;
-  display: flex;
+
   flex-direction: column;
   text-align: center;
   gap: 15px;
 }
-
 .faq-item {
-  width: 60%;
-  margin: auto;
+  background: rgba(255, 255, 255, 0.507);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  margin-bottom: 20px;
   padding: 15px;
   border-radius: 8px;
-  background-color: #f1f1f1;
-  transition: background-color 0.3s;
-}
 
-.faq-item:hover {
-  background-color: #e1e1e1;
+  transition: background-color 0.3s;
+  text-align: start;
 }
 
 .faq-item h2 {

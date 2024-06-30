@@ -4,7 +4,7 @@
     height: 500px;
     margin: auto;
 
-    background: url('/assets/image.png') no-repeat center center;
+    background: url('/images/image.png') no-repeat center center;
     background-size: cover;
 }
 

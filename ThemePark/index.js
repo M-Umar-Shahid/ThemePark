@@ -2,7 +2,6 @@ const express = require("express");
 const path = require("path");
 const fetchAreasAndRides = require("./middleware/fetchAreasnRide");
 const bodyParser = require("body-parser");
-const db = require("./connection");
 const homeRouter = require("./routes/home");
 const adventureRouter = require("./routes/adventureland");
 const wildwoodRouter = require("./routes/wildwoods");
