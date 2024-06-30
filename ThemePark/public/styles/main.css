@@ -58,6 +58,14 @@ header {
   justify-content: space-between;
   align-items: center;
 }
+#open-time {
+  background: rgba(0, 0, 0, 0.5);
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 10px;
+}
 .hero-image {
   position: absolute;
   bottom: -1%;
