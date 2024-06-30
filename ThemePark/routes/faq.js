@@ -1,9 +1,6 @@
 const express = require("express");
 let router = express.Router();
 
-
-
-
 const faqs = [
   {
     question: "What are the park's operating hours?",
@@ -11,8 +8,7 @@ const faqs = [
   },
   {
     question: "Is there parking available at the theme park?",
-    answer:
-      "Yes, we have ample parking space available for all our visitors.",
+    answer: "Yes, we have ample parking space available for all our visitors.",
   },
   {
     question: "Are there any height restrictions for the rides?",
@@ -34,37 +30,9 @@ const faqs = [
     answer:
       "Pets are not allowed inside the theme park, with the exception of service animals.",
   },
-  {
-    question: "How can I buy tickets?",
-    answer:
-      "This is a promotional website and does not sell tickets. Please visit our main website or ticketing partners for ticket purchases.",
-  },
-  {
-    question: "Is there any accommodation nearby?",
-    answer:
-      "Yes, there are several hotels and lodges nearby. Please visit our website's accommodation section for more details.",
-  },
-  {
-    question: "What should I do in case of an emergency?",
-    answer:
-      "In case of an emergency, please contact any park staff member or visit the nearest Guest Services for assistance.",
-  },
 ];
 router.get("/", (req, res) => {
-  
   res.render("FAQ", { faqs });
 });
-
-
-
-
-
-
-
-
-
-
-
-
 
 module.exports = router;

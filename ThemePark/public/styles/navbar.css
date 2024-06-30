@@ -107,25 +107,9 @@ header {
   justify-content: space-around;
 }
 
-.faq-list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 a {
   text-decoration: none;
   color: #333333;
-}
-
-.faq-item {
-  background: #fff;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: 80%;
-  box-sizing: border-box;
 }
 
 .area-item,
@@ -145,22 +129,13 @@ a {
   margin-bottom: 10px;
 }
 
-.faq-item h2 {
-  margin-bottom: 10px;
-}
-
-.faq-item p {
-  margin-bottom: 10px;
-}
-
 .area-item p,
 .ride-item p {
   margin-bottom: 10px;
 }
 
 .area-item a,
-.ride-item a,
-.faq-item a {
+.ride-item a {
   display: inline-block;
   padding: 10px 20px;
   background: #333;
@@ -170,8 +145,7 @@ a {
 }
 
 .area-item a:hover,
-.ride-item a:hover,
-.faq-item a:hover {
+.ride-item a:hover {
   background: #555;
 }
 
