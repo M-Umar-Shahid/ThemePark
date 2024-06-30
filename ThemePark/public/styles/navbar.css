@@ -394,3 +394,9 @@ form button:hover {
   position: relative;
   z-index: 1;
 }
+
+@media (max-width: 450px) {
+  .header-title {
+    font-size: 1rem;
+  }
+}
