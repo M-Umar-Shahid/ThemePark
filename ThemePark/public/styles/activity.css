@@ -1,0 +1,75 @@
+#game-container {
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: auto;
+
+    background: url('/images/image.png') no-repeat center center;
+    background-size: cover;
+}
+
+.tile {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #fcbe78;
+    cursor: pointer;
+    border: 1px solid white;
+}
+
+#animal-image {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.activity {
+    color: white;
+ 
+padding: 2%;
+text-align: center;
+background-color: #f87489;
+}
+.activity {
+display: flex;
+flex-direction: column;
+
+margin: auto;
+}
+.activity  h1{
+  
+    font-size: 2rem;
+    font-weight: bolder;
+    }
+
+    .activity  p{
+  
+        font-size: 1.5rem;
+        }
+    
+
+#game-container{
+    margin-top: 50px;
+}
+
+@media (max-width: 576px) {
+    
+
+
+    #game-container {
+        width:  100%;
+        height: 100%;
+        margin: 50px auto;
+    }
+    .tile {
+        position: absolute;
+        width: 70px;
+        height: 70px;
+        background-color: #fcbe78;
+        cursor: pointer;
+        border: 1px solid white;
+    }
+
+    
+  }
+

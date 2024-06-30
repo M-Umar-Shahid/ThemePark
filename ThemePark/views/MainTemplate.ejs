@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theme Park</title>
+    <link rel="stylesheet" href="/styles/main.css" />
+    <link rel="stylesheet" href="/styles/navbar.css" />
+    <link rel="stylesheet" href="/styles/footer.css" />
+  </head>
+  <body>
+    <%- include('components/Navbar') %>
+    <main>
+      <section style="background-color: <%= pageData.section1Color %>" class="hero">
+        <div>
+          <div class="rides-text">
+            <h1>
+              Largest <br />
+              Indoor <br />
+              Theme Park
+            </h1>
+            <p id="open-time">Open every day, April-October from 9am to 7pm</p>
+          </div>
+          <div class="hero-image">
+            <img
+              src=<%= pageData.section1Img %>
+              alt="Record-Breaking Rides"
+            />
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="passes">
+     
+          <% if (adventuresRides && adventuresRides.length > 0) { %>
+          
+            <% adventuresRides.forEach(ride => { %>
+              <div class="pass-card">
+                <img src="<%- ride.image %>" alt="<%- ride.name %>" />
+                <div class="card-content">
+                  <h2><%- ride.name %></h2>
+                  <p>
+                  
+                    <%= ride.description %>
+                  </p>
+                  <a href="http://localhost:5000<%- ride.url_text %>">Explore</a>
+                </div>
+              </div>
+            <% }); %>
+          <% } %>
+          
+
+    
+        </div>
+      </section>
+      <section style="background-color: <%= pageData.section2Color %> " class="hero-rides">
+        <div
+       
+        >
+          <div class="rides-text">
+            <h1>
+              Record- <br />
+              Breaking <br />
+              Rides & Attractions
+            </h1>
+          </div>
+          <div class="rides-image">
+            <img  src=<%= pageData.section2Img %> alt="Record-Breaking Rides" />
+          </div>
+        </div>
+        <div class="passes">
+          <div class="pass-card">
+            <img src="<%= rides[0].image %>" alt="Dream Pass" />
+            <div class="card-content">
+              <h2><%= rides[0].name %></h2>
+              <p><%= rides[0].description %></p>
+        
+            </div>
+          </div>
+          <div class="pass-card">
+            <img src="<%= rides[1].image %>" alt="Summer Season Thrill Pass" />
+            <div class="card-content">
+              <h2><%= rides[1].name %></h2>
+              <p><%= rides[1].description %></p>
+           
+            </div>
+          </div>
+          <div class="pass-card">
+            <img src="<%= rides[3].image %>" alt="All Access Pass" />
+            <div class="card-content">
+              <h2><%= rides[3].name %></h2>
+              <p><%= rides[3].description %></p>
+            
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <%- include('components/Footer') %>
+    </main>
+  </body>
+</html>
