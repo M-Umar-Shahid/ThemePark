@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interactive Activity</title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the Hidden Animals - Safari Adventure</title>
     <link rel="stylesheet" href="/styles/main.css" />
-    <script src="/scripts/activity.js" defer></script>
-  </head>
-  <body>
-    <%- include('components/Navbar') %>
-    <main>
-      <h1>Interactive Activity</h1>
-      <section class="activity">
-        <h2>Guess the Picture</h2>
-        <p>Click the squares to reveal the picture and guess what it is!</p>
-        <div class="activity-game">
-          <!-- JavaScript-generated game grid -->
-        </div>
-      </section>
-    </main>
-    <footer>
-      <p>&copy; 2024 Theme Park. All rights reserved.</p>
-    </footer>
-  </body>
+    <link rel="stylesheet" href="/styles/navbar.css" />
+    <link rel="stylesheet" href="/styles/game.css" />
+    
+</head>
+<body>
+  <%- include('components/Navbar') %>
+   <section class="activity">
+
+     <div class=""><h1>Find the Hidden Animals</h1>
+      <p>Click on the tiles to reveal parts of the hidden animal. Can you guess what it is?</p></div> 
+      <div id="game-container">
+          <img id="animal-image" src="/assets/dog_photo.png" alt="Hidden Animal">
+          <!-- Tiles will be dynamically generated here -->
+      </div>
+
+   </section>
+    <%- include('components/Footer') %>
+   <script src="/scripts/game.js"></script>
+</body>
 </html>
