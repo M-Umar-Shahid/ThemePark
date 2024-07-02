@@ -3,24 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interactive Activity</title>
-    <link rel="stylesheet" href="/styles/style.css">
-    <script src="/scripts/activity.js" defer></script>
+    <title>Memory Game</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/activity.css" />
   </head>
   <body>
-    <header>
-      <%- include('./component/Navbar'); %>
-    </header>
-    <main>
-      <h1>Interactive Activity</h1>
-      <section class="activity">
-        <h2>Guess the Picture</h2>
-        <p>Click the squares to reveal the picture and guess what it is!</p>
-        <div class="activity-game">
-          <!-- JavaScript-generated game grid -->
+    <header><%- include('./component/Navbar'); %></header>
+    <main class="main-container">
+      <div class="container">
+        <h1>Memory Game</h1>
+        <p>Click on the cards to find matching pairs!</p>
+        <div class="game-board" id="gameBoard">
+          <!-- Cards will be generated here -->
         </div>
-      </section>
+        <p id="winMessage" class="win-message"></p>
+      </div>
     </main>
-    <%- include('./component/Footer'); %>
+    <footer><%- include('./component/Footer'); %></footer>
+    <script src="/scripts/activity.js"></script>
   </body>
 </html>

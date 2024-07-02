@@ -1,70 +1,61 @@
 const express = require("express");
 let router = express.Router();
 
-
-
-
 const faqs = [
   {
-    question: "What are the park's operating hours?",
-    answer: "The park is open every day, April-October from 9am to 7pm.",
+    question: "What are the park's peak hours?",
+    answer:
+      "The park experiences peak hours from 11am to 3pm, especially on weekends.",
   },
   {
-    question: "Is there parking available at the theme park?",
+    question: "Are there any discounts available for tickets?",
     answer:
-      "Yes, we have ample parking space available for all our visitors.",
+      "Yes, we offer discounts for group bookings, senior citizens, and students. Please check our website for current promotions.",
   },
   {
-    question: "Are there any height restrictions for the rides?",
+    question: "Is there wheelchair accessibility throughout the park?",
     answer:
-      "Yes, certain rides have height restrictions for safety reasons. Please check the ride information before queueing.",
+      "Yes, our park is wheelchair accessible, and we provide rental wheelchairs at the entrance.",
   },
   {
-    question: "Can I bring my own food and drinks?",
+    question: "Are there any water rides in the park?",
     answer:
-      "Outside food and drinks are not allowed inside the park. However, we have a variety of food outlets offering delicious options for all tastes.",
+      "Yes, we have several exciting water rides for all ages. Please bring appropriate swimwear.",
   },
   {
-    question: "Is there a lost and found?",
+    question: "Can I host a birthday party at the park?",
     answer:
-      "Yes, if you lose an item, please visit our Guest Services, and we will assist you in finding it.",
+      "Absolutely! We offer special birthday party packages. Please contact our Guest Services for more information.",
   },
   {
-    question: "Are pets allowed in the theme park?",
+    question: "What happens if it rains during my visit?",
     answer:
-      "Pets are not allowed inside the theme park, with the exception of service animals.",
+      "Most rides operate rain or shine. However, some outdoor attractions may close temporarily during heavy rain or thunderstorms for safety reasons.",
   },
   {
-    question: "How can I buy tickets?",
+    question: "Are there first aid facilities in the park?",
     answer:
-      "This is a promotional website and does not sell tickets. Please visit our main website or ticketing partners for ticket purchases.",
+      "Yes, we have multiple first aid stations throughout the park. Please refer to the park map for their locations.",
   },
   {
-    question: "Is there any accommodation nearby?",
+    question: "Can I buy souvenirs at the park?",
     answer:
-      "Yes, there are several hotels and lodges nearby. Please visit our website's accommodation section for more details.",
+      "Yes, we have several gift shops offering a wide range of souvenirs and merchandise.",
   },
   {
-    question: "What should I do in case of an emergency?",
+    question: "Is there a dress code for the park?",
     answer:
-      "In case of an emergency, please contact any park staff member or visit the nearest Guest Services for assistance.",
+      "While there is no strict dress code, we recommend wearing comfortable clothing and shoes suitable for outdoor activities.",
+  },
+  {
+    question: "What payment methods are accepted in the park?",
+    answer:
+      "We accept cash, credit/debit cards, and mobile payments at all our retail and food outlets.",
   },
 ];
+
 router.get("/", (req, res) => {
-  
   res.render("FAQ", { faqs });
 });
-
-
-
-
-
-
-
-
-
-
-
-
 
 module.exports = router;
