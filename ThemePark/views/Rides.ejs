@@ -1,34 +1,32 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Themed Areas</title>
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/areas.css">
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/areas.css" />
   </head>
   <body>
-    <header>
-      <%- include('./component/Navbar'); %>
-    </header>
+    <header><%- include('./component/Navbar'); %></header>
     <main>
-     
       <section class="areas-list">
         <h1>- Rides & Attractions</h1>
         <div class="area-container">
-        <% rides.forEach(ride => { %>
-       
-        <div class="area-item card ">
-          <img src="/images/wheel.jpg" alt="Bahria Town Eye">
-          <div class="card-content">
-          <h2><%= ride.name %></h2>
-          <p><%= ride.description %></p>
-          <a href="http://localhost:5000/rides/<%= ride.id %>"><h4>See More</h4></a>
+          <% rides.forEach(ride => { %>
+
+          <div class="area-item card">
+            <img src="/images/<%= ride.image %>" alt="Bahria Town Eye" />
+            <div class="card-content">
+              <h2><%= ride.name %></h2>
+              <p><%= ride.description %></p>
+              <a href="http://localhost:5000/rides/<%= ride.id %>"
+                ><h4>See More</h4></a
+              >
+            </div>
+          </div>
+          <% }); %>
         </div>
-      </div>
-        <% }); %>
-      </div>
       </section>
     </main>
     <%- include('./component/footer'); %>
