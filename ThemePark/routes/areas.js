@@ -33,7 +33,6 @@ router.get("/:id", (req, res) => {
                 console.error("Error fetching top rides:", err);
                 res.status(500).send("Internal Server Error");
               } else {
-                console.log(topRides);
                 res.render("AreaDetails", { area, rides, topRides });
               }
             });

@@ -41,86 +41,34 @@
     <section class="attration">
       <h1>– Attractions & Rides</h1>
       <div class="main-attractions">
+        <% rides.forEach(ride => { %>
         <div class="card">
-          <img src="/images/wheel.jpg" alt="Bahria Town Eye" />
+          <img src="/images/<%= ride.image %>" alt="<%= ride.name %>" />
           <div class="card-content">
-            <h2>BAHRIA TOWN EYE</h2>
-            <p>
-              Our Bahria Town Eye features unique round that take riders to a
-              height of 35 meters where they experience a panoramic view of
-              Bahria Town Karachi.
-            </p>
+            <h2><%= ride.name %></h2>
+            <p><%= ride.description %></p>
           </div>
         </div>
-        <div class="card">
-          <img src="/images/vr.jpg" alt="Shark Attack" />
-          <div class="card-content">
-            <h2>SHARK ATTACK</h2>
-            <p>
-              Shark Attack can not only rotate around the center, but also can
-              fly up and down. Shark Attack is equipped with wonderful sound
-              effects and attractive LED lights, making it a better way to enjoy
-              the thrill.
-            </p>
-          </div>
-        </div>
-        <div class="card">
-          <img src="/images/elephant.jpg" alt="Adventure Bay" />
-          <div class="card-content">
-            <h2>ADVENTURE BAY</h2>
-            <p>
-              Adventure Bay is a virtual splash factory for the entire family.
-              Minimum 7 water slides and other water features such as tipping
-              cones, hose jets, water guns and loads of other fun-filled
-              features! Hours of fun for kids of all ages!
-            </p>
-          </div>
-        </div>
+        <% }); %>
       </div>
-      <a href=""><h4>See More</h4></a>
+      <a href="/rides"><h4>See More</h4></a>
     </section>
     <section class="areas">
       <h2>– Magic Kingdom Areas</h2>
       <div class="areas-cards">
+        <% areas.forEach(area => { %>
         <div class="card">
-          <img src="/images/old_town.jpg" alt="Bahria Town Eye" />
+          <img src="/images/<%= area.image %>" alt="<%= area.name %>" />
           <div class="card-content">
-            <h2>TOWN ZONE</h2>
+            <h2><%= area.name %></h2>
 
-            <p>
-              Our Bahria Town Eye features unique round that take riders to a
-              height of 35 meters where they experience a panoramic view of
-              Bahria Town Karachi.
-            </p>
-            <a href=""><h4>See More</h4></a>
+            <p><%= area.description %>"</p>
+            <a href="http://localhost:5000/areas/<%= area.id %>"
+              ><h4>See More</h4></a
+            >
           </div>
         </div>
-        <div class="card">
-          <img src="/images/dinoland.jpg" alt="Shark Attack" />
-          <div class="card-content">
-            <h2>DINO ATTACK ZONE</h2>
-            <p>
-              Shark Attack can not only rotate around the center, but also can
-              fly up and down. Shark Attack is equipped with wonderful sound
-              effects and attractive LED lights, making it a better way to enjoy
-              the thrill.
-            </p>
-            <a href=""><h4>See More</h4></a>
-          </div>
-        </div>
-        <div class="card">
-          <img src="/images/adventureland.jpg" alt="Adventure Bay" />
-          <div class="card-content">
-            <h2>ADVENTURE BAY ZONE</h2>
-            <p>
-              Adventure Bay is a virtual splash factory for the entire family.
-              Minimum 7 water slides and other water features such as tipping
-              cones, hose jets, water guns and loads of other fun-filled
-              features! Hours of fun for kids of all ages!
-            </p>
-            <a href=""><h4>See More</h4></a>
-          </div>
-        </div>
+        <% }); %>
       </div>
     </section>
     <%- include('./component/Footer'); %>
