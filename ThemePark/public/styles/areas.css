@@ -1,0 +1,33 @@
+@import url(/styles/style.css);
+
+
+.area-container{
+    margin: auto;
+    margin-top: 50px;
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.area-item h4{
+    background-color: var( --secondary-color);
+    color: var( --background-color);
+  width: fit-content;
+  padding: 10px 20px;
+}
+.area-item h4:hover{
+    background-color: var(  --secondary-dark-color);
+}
+
+
+
+@media screen and (max-width: 930px) {
+    .area-container{
+
+        width: 100%;
+
+
+    }
+}

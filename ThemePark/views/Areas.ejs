@@ -5,21 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Themed Areas</title>
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/areas.css">
   </head>
   <body>
     <header>
-      <%- include('./component/navbar'); %>
+      <%- include('./component/Navbar'); %>
     </header>
     <main>
-      <h1>Themed Areas</h1>
+     
       <section class="areas-list">
+        <h1>- Themed Areas</h1>
+        <div class="area-container">
         <% areas.forEach(area => { %>
-        <div class="area-item">
+       
+        <div class="area-item card ">
+          <img src="/images/wheel.jpg" alt="Bahria Town Eye">
+          <div class="card-content">
           <h2><%= area.name %></h2>
           <p><%= area.description %></p>
-          <a href="/areas/<%= area.id %>">Learn More</a>
+          <a href="http://localhost:5000/areas/<%= area.id %>"><h4>See More</h4></a>
         </div>
+      </div>
         <% }); %>
+      </div>
       </section>
     </main>
     <%- include('./component/footer'); %>
