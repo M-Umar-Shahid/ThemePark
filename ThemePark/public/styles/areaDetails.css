@@ -98,3 +98,13 @@ h2 {
   margin: 10px 0 0;
   font-size: 1rem;
 }
+
+
+@media screen and (max-width: 786px) {
+  .hero-text {
+    width: 100%; 
+   
+     left: 0%;
+ bottom: 0;
+}
+}
