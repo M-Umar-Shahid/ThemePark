@@ -1,23 +1,61 @@
+document.getElementById('contactForm').addEventListener('submit', function(event) {
+  let isValid = true;
 
-      document
-        .getElementById("contactForm")
-        .addEventListener("submit", function (event) {
-          const name = document.getElementById("name").value;
-          const email = document.getElementById("email").value;
-          const subject = document.getElementById("subject").value;
-          const message = document.getElementById("message").value;
+  // Clear previous errors
+  const errorElements = document.querySelectorAll('.error');
+  errorElements.forEach(element =>{ 
+    
+    
+    element.textContent = '';
+   
+  
+  });
 
-          if (!name || !email || !subject || !message) {
-            alert("All fields are required.");
-            event.preventDefault();
-            return;
-          }
+  const inputElements = document.querySelectorAll('input, textarea');
+  inputElements.forEach(element => element.classList.remove('input-error'));
 
-          const emailPattern =
-            /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
-          if (!emailPattern.test(email)) {
-            alert("Please enter a valid email address.");
-            event.preventDefault();
-            return;
-          }
-        });
+  // Validate name
+  const name = document.getElementById('name').value.trim();
+  if (name === '') {
+      const nameError = document.getElementById('nameError');
+      nameError.textContent = 'Name is required.';
+      document.getElementById('name').classList.add('input-error');
+      isValid = false;
+  }
+
+  // Validate email
+  const email = document.getElementById('email').value.trim();
+  if (email === '') {
+      const emailError = document.getElementById('emailError');
+      emailError.textContent = 'Email is required.';
+      document.getElementById('email').classList.add('input-error');
+      isValid = false;
+  } else if (!/\S+@\S+\.\S+/.test(email)) {
+      const emailError = document.getElementById('emailError');
+      emailError.textContent = 'Please enter a valid email address.';
+      document.getElementById('email').classList.add('input-error');
+      isValid = false;
+  }
+
+  // Validate subject
+  const subject = document.getElementById('subject').value.trim();
+  if (subject === '') {
+      const subjectError = document.getElementById('subjectError');
+      subjectError.textContent = 'Subject is required.';
+      document.getElementById('subject').classList.add('input-error');
+      isValid = false;
+  }
+
+  // Validate message
+  const message = document.getElementById('message').value.trim();
+  if (message === '') {
+      const messageError = document.getElementById('messageError');
+      messageError.textContent = 'Message is required.';
+      document.getElementById('message').classList.add('input-error');
+      isValid = false;
+  }
+
+  if (!isValid) {
+      event.preventDefault();
+  }
+});

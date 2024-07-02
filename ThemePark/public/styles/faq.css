@@ -1,0 +1,60 @@
+@import url(/styles/style.css);
+
+.faq-sec{
+    padding: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    background-image: url("/images/elephant.jpg");
+    overflow: hidden;
+    position: relative;
+}
+
+  .faq-sec::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.39);
+    z-index: 2;
+  }
+  
+  .faq-content {
+    border-radius: 50px;
+    padding: 5%;
+    background-color: rgb(255, 255, 255);
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+    z-index: 3;
+    
+    text-align: start;
+  
+  }
+
+  
+@media screen and (max-width: 596px) {
+  .faq-content {
+    border-radius: 26px;
+    padding: 8%;
+    
+}
+h1 {
+  font-size: 1.5rem;
+}
+h2 {
+  font-size: 1.25rem;
+ 
+}
+p {
+  font-size: 1rem;
+}
+}

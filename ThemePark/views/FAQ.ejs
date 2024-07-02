@@ -5,20 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FAQ</title>
     <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/faq.css">
   </head>
   <body>
     <header>
       <%- include('./component/navbar'); %>
     </header>
-    <main>
-      <h1>Frequently Asked Questions</h1>
-      <section class="faq-list">
+    <main class="" >
+      
+      <section class="faq-sec">
+        <div class="faq-content"> 
+        <h1>Frequently Asked Questions</h1>
         <% faqs.forEach(faq => { %>
         <div class="faq-item">
           <h2><%= faq.question %></h2>
           <p><%= faq.answer %></p>
         </div>
         <% }); %>
+      </div>
       </section>
     </main>
     <%- include('./component/Footer'); %>

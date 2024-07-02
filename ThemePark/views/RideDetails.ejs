@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= ride.name %> Details</title>
+    <link rel="stylesheet" href="/styles/style.css">
+  </head>
+  <body>
+    <header>
+      <%- include('./component/Navbar'); %>
+    </header>
+    <main>
+      <h1><%= ride.name %></h1>
+      <p><%= ride.description %></p>
+      <h2>Rides & Attractions</h2>
+      
+    </main>
+    <footer>
+      <p>&copy; 2024 Theme Park. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

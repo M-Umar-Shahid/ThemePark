@@ -25,39 +25,37 @@
 transition: all 0.5s ease-in-out;
 }
 
-/* styles.css */
 
-/* Increase font size and font weight for headings and paragraph */
 h1 {
-  font-size: 3rem; /* Adjust the size as needed */
-  font-weight: 700; /* Increase the weight */
+  font-size: 3rem;   
+  font-weight: 700;    
 }
 
 h2 {
-  font-size: 2rem; /* Adjust the size as needed */
-  font-weight: 600; /* Increase the weight */
+  font-size: 2rem;   
+  font-weight: 600;    
 }
 
 h3 {
-  font-size: 2rem; /* Adjust the size as needed */
-  font-weight: 500; /* Increase the weight */
+  font-size: 2rem;   
+  font-weight: 500;    
 }
 
 h4 {
-  font-size: 1.5rem; /* Adjust the size as needed */
-  font-weight: 500; /* Increase the weight */
+  font-size: 1.5rem;   
+  font-weight: 500;    
 }
 
 p{
-  font-size: 1.4rem; /* Adjust the size as needed */
-  font-weight: 300; /* Adjust the weight as needed */
+  font-size: 1.4rem;   
+  font-weight: 300;  
   font-family: Roboto, Helvetica, sans-serif
 }
 a {
   text-decoration: none;
   color: var(--text-color);
-  font-size: 1rem; /* Adjust the size as needed */
-  font-weight: 300; /* Adjust the weight as needed */
+  font-size: 1rem;   
+  font-weight: 300;  
   font-family: Roboto, Helvetica, sans-serif
 }
 
@@ -73,6 +71,10 @@ section{
 padding: 5%;
 
   
+}
+
+label{
+  font-size: 1.2rem;
 }
 /* classes */
 .navbar {
@@ -96,7 +98,8 @@ padding: 5%;
 .logo {
   height: var(--logo-height);
 }
-.logo ~ h2:hover {
+
+.logo ~ a h2:hover {
   cursor: pointer;
   color: var(--secondary-color);
 }
@@ -260,7 +263,7 @@ margin-bottom: 10px;
   background-image: url("/images/vr.jpg");
   overflow: hidden;
   text-align: center;
-  position: relative; /* Ensure the pseudo-element is positioned relative to the parent */
+  position: relative; 
 }
 
 .attration::before {
@@ -270,13 +273,13 @@ margin-bottom: 10px;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.39); /* Darkens the background */
+  background-color: rgba(0, 0, 0, 0.39); 
   z-index: 1;
 }
 
 .attration > * {
   position: relative;
-  z-index: 2; /* Ensure content is above the pseudo-element */
+  z-index: 2; 
 }
 
 .attration a {
@@ -350,7 +353,7 @@ margin-top: 50px;
   left: 0;
   width: 100%;
   height: 5px;
-  background-color: var(--secondary-color); /* Adjust border color as needed */
+  background-color: var(--secondary-color); 
 }
 
 footer {
@@ -446,8 +449,8 @@ footer {
  
   display: flex;
   justify-content: center;
-  gap: 20px; /* Adjust gap between cards as needed */
-  flex-wrap: wrap; /* Ensure the cards wrap on smaller screens */
+  gap: 20px; 
+  flex-wrap: wrap; 
  text-align: center;
 width: 100%;
 margin-top: 50px;
@@ -500,6 +503,9 @@ margin-top: 50px;
   }
   .logo {
     height: 50px;
+}
+.logo ~ a h2 {
+font-size: 1.25rem;
 }
   .navbar > div> h2 {
     font-size: 1.2rem;
