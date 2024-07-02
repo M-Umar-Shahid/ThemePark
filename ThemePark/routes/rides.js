@@ -1,7 +1,6 @@
 const express = require("express");
 let router = express.Router();
-const db = require("../db_connection"); 
-
+const db = require("../db_connection");
 
 router.get("/", (req, res) => {
   db.all("SELECT * FROM rides", [], (err, rows) => {
@@ -21,21 +20,20 @@ router.get("/:id", (req, res) => {
       console.error("Error fetching ride:", err);
       res.status(500).send("Internal Server Error");
     } else {
-      res.render("RideDetails", { ride: row });
+      db.all(
+        "SELECT * FROM rides ORDER BY RANDOM() LIMIT 3",
+        [],
+        (err, randomRides) => {
+          if (err) {
+            console.error("Error fetching random rides:", err);
+            res.status(500).send("Internal Server Error");
+          } else {
+            res.render("RideDetails", { ride: row, randomRides: randomRides });
+          }
+        }
+      );
     }
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
 
 module.exports = router;

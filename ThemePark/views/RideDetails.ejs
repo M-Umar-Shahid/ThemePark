@@ -4,20 +4,48 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= ride.name %> Details</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/areaDetails.css" />
   </head>
   <body>
-    <header>
-      <%- include('./component/Navbar'); %>
-    </header>
+    <header><%- include('./component/Navbar'); %></header>
     <main>
-      <h1><%= ride.name %></h1>
-      <p><%= ride.description %></p>
-      <h2>Rides & Attractions</h2>
-      
+      <section id="detail-bg">
+        <div class="hero">
+          <img
+            class="area-image"
+            src="/images/<%= ride.image %>"
+            alt="<%= ride.name %>"
+          />
+          <div class="hero-text">
+            <h1><%= ride.name %></h1>
+            <p><%= ride.description %></p>
+          </div>
+        </div>
+      </section>
+      <section class="main">
+        <div>
+          <h2 id="requirement-heading">– Requirements</h2>
+          <p><%= ride.requirement %></p>
+          <a href=""><h4>Learn More</h4></a>
+        </div>
+      </section>
+      <h2>- Explore more rides</h2>
+      <section class="rides-list">
+        <% randomRides.forEach(ride => { %>
+        <div class="area-item card">
+          <img src="/images/<%= ride.image %>" alt="Bahria Town Eye" />
+          <div class="card-content">
+            <h2><%= ride.name %></h2>
+            <p><%= ride.description %></p>
+            <a href="http://localhost:5000/rides/<%= ride.id %>"
+              ><h4 id="exploreride-button">See More</h4></a
+            >
+          </div>
+        </div>
+        <% }); %>
+      </section>
     </main>
-    <footer>
-      <p>&copy; 2024 Theme Park. All rights reserved.</p>
-    </footer>
+    <footer><%- include('./component/Footer'); %></footer>
   </body>
 </html>

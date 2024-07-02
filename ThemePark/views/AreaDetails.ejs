@@ -4,27 +4,56 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= area.name %> Details</title>
-    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/areaDetails.css" />
   </head>
   <body>
-    <header>
-      <%- include('./component/Navbar'); %>
-    </header>
+    <header><%- include('./component/Navbar'); %></header>
     <main>
-      <h1><%= area.name %></h1>
-      <p><%= area.description %></p>
+      <section id="detail-bg">
+        <div class="hero">
+          <img
+            class="area-image"
+            src="/images/<%= area.image %>"
+            alt="<%= area.name %>"
+          />
+          <div class="hero-text">
+            <h1><%= area.name %></h1>
+            <p><%= area.description %></p>
+          </div>
+        </div>
+      </section>
       <h2>Rides & Attractions</h2>
       <section class="rides-list">
         <% rides.forEach(ride => { %>
-        <div class="ride-item">
-          <h2><%= ride.name %></h2>
-          <p><%= ride.description %></p>
+        <div class="ride-item card">
+          <img src="/images/<%= ride.image %>" alt="<%= ride.name %>" />
+          <div class="card-content">
+            <h3><%= ride.name %></h3>
+            <p><%= ride.description %></p>
+            <a href="http://localhost:5000/rides/<%= ride.id %>"
+              ><h4 id="exploreride-button">See More</h4></a
+            >
+          </div>
         </div>
         <% }); %>
       </section>
+      <section class="attration">
+        <h1>–Top 3 Attractions & Rides</h1>
+        <div class="main-attractions">
+          <% topRides.forEach(ride => { %>
+          <div class="area-item card">
+            <img src="/images/<%= ride.image %>" alt="Bahria Town Eye" />
+            <div class="card-content">
+              <h2><%= ride.name %></h2>
+              <p><%= ride.description %></p>
+            </div>
+          </div>
+          <% }); %>
+        </div>
+        <a href="/rides"><h4>See More</h4></a>
+      </section>
     </main>
-    <footer>
-      <p>&copy; 2024 Theme Park. All rights reserved.</p>
-    </footer>
+    <footer><%- include('./component/Footer'); %></footer>
   </body>
 </html>
