@@ -69,7 +69,7 @@ document.addEventListener("DOMContentLoaded", () => {
         card2.classList.remove("flipped");
         card1.textContent = "";
         card2.textContent = "";
-      }, 1000);
+      }, 500);
     }
 
     flippedCards = [];
