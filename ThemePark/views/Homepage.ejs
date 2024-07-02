@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Custom Navbar</title>
-    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="icon" type="image/x-icon" href="/images/logo.png">
+    <link rel="stylesheet" href="/styles/style.css" >
   </head>
   <body>
     <header><%- include('./component/Navbar'); %></header>
@@ -34,8 +35,6 @@
           <span>9am to 7pm.</span> Make sure to plan your visit and immerse
           yourself in a day filled with unforgettable adventures.
         </p>
-
-        <a href=""><h4>Learn More</h4></a>
       </div>
     </section>
     <section class="attration">
@@ -43,7 +42,7 @@
       <div class="main-attractions">
         <% rides.forEach(ride => { %>
         <div class="card">
-          <img src="/images/<%= ride.image %>" alt="<%= ride.name %>" />
+          <img src="/images/<%= ride.image %>" alt="<%= ride.name %>" >
           <div class="card-content">
             <h2><%= ride.name %></h2>
             <p><%= ride.description %></p>
@@ -58,7 +57,7 @@
       <div class="areas-cards">
         <% areas.forEach(area => { %>
         <div class="card">
-          <img src="/images/<%= area.image %>" alt="<%= area.name %>" />
+          <img src="/images/<%= area.image %>" alt="<%= area.name %>" >
           <div class="card-content">
             <h2><%= area.name %></h2>
 
