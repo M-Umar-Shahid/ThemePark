@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title><%= ride.name %> Details</title>
-    <link rel="icon" type="image/x-icon" href="/images/logo.png">
-    <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/areaDetails.css" >
+    <link rel="icon" type="image/x-icon" href="/images/logo.png" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/details.css" />
   </head>
   <body>
     <header><%- include('./component/Navbar'); %></header>
@@ -17,7 +17,7 @@
             class="area-image"
             src="/images/<%= ride.image %>"
             alt="<%= ride.name %>"
-          >
+          />
           <div class="hero-text">
             <h1><%= ride.name %></h1>
             <p><%= ride.description %></p>
@@ -35,7 +35,7 @@
       <section class="rides-list">
         <% randomRides.forEach(ride => { %>
         <div class="area-item card">
-          <img src="/images/<%= ride.image %>" alt="Bahria Town Eye" >
+          <img src="/images/<%= ride.image %>" alt="Bahria Town Eye" />
           <div class="card-content">
             <h2><%= ride.name %></h2>
             <p><%= ride.description %></p>
