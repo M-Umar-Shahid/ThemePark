@@ -4,31 +4,39 @@
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Themed Areas</title>
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/areas.css" />
+=======
+>>>>>>> Stashed changes
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/areas.css">
+>>>>>>> 175f78b5dd2afd83fcb4bd87e4ef4b3268065577
   </head>
   <body>
-    <header>
-      <%- include('./component/Navbar'); %>
-    </header>
+    <header><%- include('./component/Navbar'); %></header>
     <main>
-     
       <section class="areas-list">
         <h1>- Themed Areas</h1>
         <div class="area-container">
-        <% areas.forEach(area => { %>
-       
-        <div class="area-item card ">
-          <img src="/images/<%= area.image %>" alt="Bahria Town Eye">
-          <div class="card-content">
-          <h2><%= area.name %></h2>
-          <p><%= area.description %></p>
-          <a href="http://localhost:5000/areas/<%= area.id %>"><h4>See More</h4></a>
+          <% areas.forEach(area => { %>
+
+          <div class="area-item card">
+            <img src="/images/<%= area.image %>" alt="Bahria Town Eye" />
+            <div class="card-content">
+              <h2><%= area.name %></h2>
+              <p><%= area.description %></p>
+              <a href="http://localhost:5000/areas/<%= area.id %>"
+                ><h4>See More</h4></a
+              >
+            </div>
+          </div>
+          <% }); %>
         </div>
-      </div>
-        <% }); %>
-      </div>
       </section>
     </main>
     <%- include('./component/footer'); %>

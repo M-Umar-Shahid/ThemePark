@@ -4,45 +4,49 @@
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>Contact Us</title>
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/contact.css" />
+=======
+>>>>>>> Stashed changes
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
     <link rel="stylesheet" href="/styles/style.css" >
     <link rel="stylesheet" href="/styles/contact.css">
+>>>>>>> 175f78b5dd2afd83fcb4bd87e4ef4b3268065577
   </head>
   <body>
-    <header>
-      <%- include('./component/Navbar'); %>
-    </header>
+    <header><%- include('./component/Navbar'); %></header>
     <main class="contact-main">
       <section class="contact-sec">
-     
-        <div class="contact-main-content"> 
+        <div class="contact-main-content">
           <h1>Contact Us</h1>
           <form id="contactForm" action="/contact" method="POST">
             <label for="name">Name:</label>
             <div class="error" id="nameError"></div>
-            <input type="text" id="name" name="name"  />
-    
+            <input type="text" id="name" name="name" />
+
             <label for="email">Email:</label>
             <div class="error" id="emailError"></div>
 
-            <input type="email" id="email" name="email"  />
-    
+            <input type="email" id="email" name="email" />
+
             <label for="subject">Subject:</label>
             <div class="error" id="subjectError"></div>
-            <input type="text" id="subject" name="subject"  />
-    
+            <input type="text" id="subject" name="subject" />
+
             <label for="message">Message:</label>
             <div class="error" id="messageError"></div>
-            <textarea id="message" name="message" ></textarea>
-    
+            <textarea id="message" name="message"></textarea>
+
             <button class="btn" type="submit">Submit</button>
           </form>
         </div>
-    
       </section>
-   
     </main>
     <%- include('./component/Footer'); %>
-<script src="/scripts/contactus.js"></script>
+    <script src="/scripts/contactus.js"></script>
   </body>
 </html>

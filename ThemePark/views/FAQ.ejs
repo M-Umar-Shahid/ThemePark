@@ -4,26 +4,32 @@
     <meta charset="UTF-8" >
     <meta name="viewport" content="width=device-width, initial-scale=1.0" >
     <title>FAQ</title>
+<<<<<<< Updated upstream
+=======
+<<<<<<< HEAD
+    <link rel="icon" type="image/x-icon" href="/images/favicon.png" />
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/faq.css" />
+=======
+>>>>>>> Stashed changes
     <link rel="icon" type="image/x-icon" href="/images/logo.png">
     <link rel="stylesheet" href="/styles/style.css">
     <link rel="stylesheet" href="/styles/faq.css">
+>>>>>>> 175f78b5dd2afd83fcb4bd87e4ef4b3268065577
   </head>
   <body>
-    <header>
-      <%- include('./component/navbar'); %>
-    </header>
-    <main class="" >
-      
+    <header><%- include('./component/navbar'); %></header>
+    <main class="">
       <section class="faq-sec">
-        <div class="faq-content"> 
-        <h1>Frequently Asked Questions</h1>
-        <% faqs.forEach(faq => { %>
-        <div class="faq-item">
-          <h2><%= faq.question %></h2>
-          <p><%= faq.answer %></p>
+        <div class="faq-content">
+          <h1>Frequently Asked Questions</h1>
+          <% faqs.forEach(faq => { %>
+          <div class="faq-item">
+            <h2><%= faq.question %></h2>
+            <p><%= faq.answer %></p>
+          </div>
+          <% }); %>
         </div>
-        <% }); %>
-      </div>
       </section>
     </main>
     <%- include('./component/Footer'); %>
